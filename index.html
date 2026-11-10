@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="description" content="Kenly Golf Club 2027: St. George + Vegas, May 13–16. The itinerary, tee times, bookings and flights.">
+<meta name="description" content="Kenly Golf Club 2027: the proposed St. George + Vegas itinerary for May 13–16. Read it over and vote.">
 <meta property="og:title" content="KGC 2027 · St. George + Vegas">
-<meta property="og:description" content="May 13–16, 2027. The itinerary, tee times, bookings and flights.">
+<meta property="og:description" content="Proposed itinerary for May 13–16, 2027. Read it over and vote.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://twkenly.github.io/kenly-golf-club/">
 <meta property="og:image" content="https://twkenly.github.io/kenly-golf-club/img/kgc-share.jpg">
@@ -53,96 +53,75 @@ a{color:var(--accent)}
 [hidden]{display:none!important}
 .wrap{max-width:960px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
 .eyebrow{font:600 12px/16px var(--font-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
-.muted{color:var(--ink-muted)}
 h1,h2,h3{font-family:var(--font-serif);font-weight:400;margin:0;text-wrap:balance}
 
 /* masthead */
 .mast{padding-top:env(safe-area-inset-top,0px)}
-.mast-inner{display:grid;gap:var(--space-3);padding-block:var(--space-6) var(--space-6)}
-.mast-top{display:flex;gap:var(--space-3);align-items:center;justify-content:space-between;flex-wrap:wrap}
+.mast-inner{display:grid;gap:var(--space-3);padding-block:var(--space-6)}
+.mast-top{display:flex;gap:var(--space-3) var(--space-6);align-items:center;justify-content:space-between;flex-wrap:wrap;margin-bottom:var(--space-3)}
 .club{display:flex;gap:var(--space-3);align-items:center;color:var(--ink);text-decoration:none}
 .crest{display:inline-grid;place-items:center;width:56px;height:56px;border-radius:var(--radius-pill);background:var(--crest-cream);box-shadow:0 0 0 2px var(--crest-green);flex:none}
-.crest img{width:42px;height:auto}
+.crest img{width:42px}
 .club-name{font-family:var(--font-serif);font-size:15px;line-height:20px;letter-spacing:.04em}
-.nav{display:flex;gap:var(--space-4);flex-wrap:wrap;font-size:15px}
+.nav{display:flex;gap:var(--space-2) var(--space-4);flex-wrap:wrap;font-size:15px;line-height:22px}
 .nav a{color:var(--ink-muted);text-decoration:none}
 .nav a:hover{color:var(--ink);text-decoration:underline}
 .title{font-size:clamp(34px,8.5vw,48px);line-height:1.1}
 .sub{margin:0;font-size:16px;line-height:24px;color:var(--ink-muted)}
-.count{font-weight:600;color:var(--ink)}
+.sub b{color:var(--ink);font-weight:600}
 .rule{height:2px;background:var(--accent);border:0;margin:0}
-.cta{display:flex;flex-wrap:wrap;gap:var(--space-3);margin-top:var(--space-2)}
-.btn{font:600 16px/20px var(--font-sans);min-height:48px;padding:0 var(--space-6);border-radius:var(--radius-sm);border:1px solid var(--line-strong);background:transparent;color:var(--ink);display:inline-flex;align-items:center;justify-content:center;text-decoration:none}
-.btn-primary{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
 
-.hero{margin-top:var(--space-8)}
-.hero img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:var(--radius-sm)}
-.cap{font-size:13px;line-height:18px;color:var(--ink-muted);margin-top:var(--space-2)}
+/* visual summary */
+.summary{margin-top:var(--space-8);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3)}
+.tile{margin:0;display:grid;gap:var(--space-2)}
+.tile img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-sm)}
+.tile figcaption{display:grid;gap:2px}
+.tile b{font-family:var(--font-serif);font-weight:400;font-size:18px;line-height:24px}
+.tile span{font-size:13px;line-height:18px;color:var(--ink-muted)}
 
 section{padding-block:var(--space-12) 0}
 .sec-head{display:grid;gap:var(--space-2);margin-bottom:var(--space-6)}
 .sec-head h2{font-size:30px;line-height:1.15}
 .sec-head p{margin:0;color:var(--ink-muted);max-width:60ch}
 
+.grid2{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-4)}
+.card{background:var(--ground-raised);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
+.card>img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.card-body{padding:var(--space-4);display:grid;gap:var(--space-2)}
+.card-body h3{font-size:21px;line-height:1.25}
+.card-body p{margin:0;font-size:15px;line-height:22px;color:var(--ink-muted)}
+
 /* day cards */
-.days{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-4)}
-.day{background:var(--ground-raised);border:1px solid var(--line);border-radius:var(--radius-sm)}
 .day-head{display:flex;justify-content:space-between;align-items:baseline;gap:var(--space-3);padding:var(--space-4) var(--space-4) 0;flex-wrap:wrap}
 .day-tz{font-size:14px;line-height:20px;color:var(--ink-muted)}
 .day-body{padding:var(--space-2) var(--space-4) var(--space-4);display:grid;gap:var(--space-3)}
 .day-title{font-size:21px;line-height:1.25}
 .day-list{list-style:none;margin:0;padding:var(--space-3) 0 0;border-top:1px solid var(--line);display:grid;gap:var(--space-3)}
-.day-list li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:var(--space-3);align-items:baseline}
-.time{font-weight:600;font-variant-numeric:tabular-nums}
+.day-list li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:var(--space-3);align-items:baseline}
+.time{font-weight:600}
 .note{font-size:14px;line-height:20px;color:var(--ink-muted)}
 
-/* tee times */
-.tees{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-4)}
-.tee{background:var(--ground-raised);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;display:grid;grid-template-columns:minmax(0,1fr)}
-.tee img{width:100%;aspect-ratio:3/2;object-fit:cover}
-.tee-body{padding:var(--space-4);display:grid;grid-template-columns:auto minmax(0,1fr);gap:var(--space-1) var(--space-4);align-items:center}
-.tee-time{grid-row:span 2;font:500 30px/1 var(--font-sans);font-variant-numeric:tabular-nums}
-.tee-time small{display:block;margin-top:6px;font-size:12px;line-height:16px;font-weight:600;letter-spacing:.14em;color:var(--ink-muted)}
-.tee-course{font-size:21px;line-height:1.25}
-.tee-meta{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-3);align-items:center;font-size:14px;line-height:20px;color:var(--ink-muted)}
-.tee-foot{grid-column:1/-1;margin:var(--space-2) 0 0;font-size:14px;line-height:20px;color:var(--ink-muted)}
+/* golf */
+.when{display:flex;flex-wrap:wrap;gap:var(--space-2) var(--space-3);align-items:baseline}
+.when strong{font:500 22px/1.2 var(--font-sans)}
+.when span{font-size:14px;line-height:20px;color:var(--ink-muted)}
 
-/* chips */
-.chip{display:inline-flex;align-items:center;font:600 12px/16px var(--font-sans);letter-spacing:.1em;text-transform:uppercase;padding:var(--space-1) 10px;border-radius:var(--radius-pill);white-space:nowrap}
-.chip-booked{background:var(--booked-soft);color:var(--booked)}
-.chip-tobook{background:var(--tobook-soft);color:var(--tobook)}
-.chip-opens{background:var(--opens-soft);color:var(--opens)}
-
-/* stay */
-.stays{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-4)}
-.stay{background:var(--ground-raised);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
-.stay img{width:100%;aspect-ratio:3/2;object-fit:cover}
-.stay-body{padding:var(--space-4);display:grid;gap:var(--space-2)}
-.stay-body h3{font-size:21px;line-height:1.25}
-.stay-body p{margin:0;font-size:15px;line-height:22px;color:var(--ink-muted)}
-
-/* tracker + board */
+/* flights */
 .panel{background:var(--ground-raised);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
-.track-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:var(--space-1) var(--space-3);padding:var(--space-3) var(--space-4);border-top:1px solid var(--line);align-items:center}
-.track-row:first-child{border-top:0}
-.track-what{font-weight:600}
-.track-who{grid-column:1/-1;font-size:14px;line-height:20px;color:var(--ink-muted)}
-.board-head,.board-row{display:grid;grid-template-columns:minmax(0,1fr) 56px auto;gap:var(--space-1) var(--space-3);align-items:center;padding:var(--space-3) var(--space-4)}
+.board-head,.board-row{display:grid;grid-template-columns:minmax(0,1fr) 56px;gap:var(--space-1) var(--space-3);align-items:center;padding:var(--space-3) var(--space-4)}
 .board-head{background:var(--club);color:var(--on-club);font:600 12px/16px var(--font-sans);letter-spacing:.14em;text-transform:uppercase}
 .board-row+.board-row{border-top:1px solid var(--line)}
 .board-name{font-weight:600}
-.board-code{font-weight:600;letter-spacing:.06em;font-variant-numeric:tabular-nums}
+.board-code{font-weight:600;letter-spacing:.06em;text-align:right}
 .board-flight{grid-column:1/-1;font-size:14px;line-height:20px;color:var(--ink-muted)}
 
 /* costs */
-.cost-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-4)}
 .ledger{width:100%;border-collapse:collapse;font-size:15px}
 .ledger td{padding:var(--space-3) var(--space-4);border-top:1px solid var(--line);vertical-align:top}
-.ledger tr:first-child td{border-top:0}
 .ledger td:last-child{text-align:right;white-space:nowrap;font-variant-numeric:tabular-nums}
 .ledger small{display:block;font-size:13px;line-height:18px;color:var(--ink-muted)}
 .ledger .total td{border-top:1px solid var(--line-strong);font-weight:600}
-.ledger caption{caption-side:top;text-align:left;padding:var(--space-3) var(--space-4) 0;font:600 12px/16px var(--font-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted)}
+.ledger caption{caption-side:top;text-align:left;padding:var(--space-3) var(--space-4);font:600 12px/16px var(--font-sans);letter-spacing:.14em;text-transform:uppercase;color:var(--ink-muted)}
 .only{margin:0 0 var(--space-4);font-size:15px;line-height:22px;color:var(--ink-muted)}
 .only b{color:var(--ink)}
 
@@ -155,18 +134,38 @@ section{padding-block:var(--space-12) 0}
 .faq details[open] summary::after{content:"–"}
 .faq details p{margin:0;padding:0 2px var(--space-4);font-size:16px;line-height:25px;color:var(--ink-muted);max-width:68ch}
 
-.survey-link{margin-top:var(--space-12);padding:var(--space-6) var(--space-4);border:1px solid var(--line);border-radius:var(--radius-sm);display:grid;gap:var(--space-3)}
-.survey-link h2{font-size:24px;line-height:1.2}
-.survey-link p{margin:0;color:var(--ink-muted)}
+/* vote */
+.vote{background:var(--ground-raised);border:1px solid var(--line);border-radius:var(--radius-sm);padding:var(--space-6) var(--space-4);display:grid;gap:var(--space-4)}
+.roster{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-2)}
+.who{display:flex;justify-content:space-between;align-items:center;gap:var(--space-2);padding:var(--space-2) var(--space-3);border:1px solid var(--line);border-radius:var(--radius-sm);font-size:15px}
+.who b{font-weight:600}
+.chip{display:inline-flex;align-items:center;font:600 11px/16px var(--font-sans);letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:var(--radius-pill);white-space:nowrap;background:var(--line);color:var(--ink-muted)}
+.chip-in{background:var(--booked-soft);color:var(--booked)}
+.chip-maybe{background:var(--tobook-soft);color:var(--tobook)}
+.chip-out{background:var(--accent-soft);color:var(--accent)}
+.tally{margin:0;font-size:16px}
+.tally b{font-weight:600}
+label.lbl{font-weight:600;font-size:15px}
+select,textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--ground);border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:10px 12px;width:100%}
+textarea{resize:vertical;min-height:48px}
+.choices{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-2)}
+.choice{font:600 16px/20px var(--font-sans);min-height:48px;padding:0 var(--space-4);border-radius:var(--radius-sm);border:1px solid var(--line-strong);background:transparent;color:var(--ink);cursor:pointer}
+.choice-in{background:var(--accent);border-color:var(--accent);color:var(--on-accent)}
+.choice[disabled]{opacity:.5;cursor:not-allowed}
+.status{font-size:14px;line-height:20px;color:var(--ink-muted);min-height:20px;margin:0}
+.status.ok{color:var(--booked)} .status.err{color:var(--accent)}
 
-footer{padding-block:var(--space-12) var(--space-12);font-size:13px;line-height:19px;color:var(--ink-muted)}
+footer{padding-block:var(--space-12);font-size:13px;line-height:19px;color:var(--ink-muted)}
 footer details{margin-top:var(--space-2)}
 
 @media (min-width:720px){
-  .days,.tees,.stays,.cost-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .tees{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .summary{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .grid2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .roster{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .choices{grid-template-columns:repeat(3,minmax(0,1fr))}
   section{padding-block:var(--space-16) 0}
-  .day-head,.day-body,.tee-body,.stay-body{padding-left:var(--space-6);padding-right:var(--space-6)}
+  .day-head,.day-body,.card-body{padding-left:var(--space-6);padding-right:var(--space-6)}
+  .vote{padding:var(--space-8)}
 }
 </style>
 </head>
@@ -175,55 +174,72 @@ footer details{margin-top:var(--space-2)}
   <div class="wrap mast-inner">
     <div class="mast-top">
       <a class="club" href="./"><span class="crest"><img src="img/kgc-logo.png" alt="" width="42" height="40"></span><span class="club-name">Kenly Golf Club</span></a>
-      <nav class="nav" aria-label="Sections"><a href="#weekend">Weekend</a><a href="#golf">Golf</a><a href="#bookings">Bookings</a><a href="#flights">Flights</a><a href="survey.html#results">Survey</a></nav>
+      <nav class="nav" aria-label="Sections"><a href="#stay">Stay</a><a href="#weekend">Weekend</a><a href="#golf">Golf</a><a href="#flights">Flights</a><a href="#costs">Costs</a><a href="#vote">Vote</a><a href="survey.html#results">Survey results</a></nav>
     </div>
-    <span class="eyebrow">Trip No. 4 · Spring 2027</span>
+    <span class="eyebrow">Proposed itinerary · Trip No. 4</span>
     <h1 class="title">St. George + Vegas</h1>
-    <p class="sub">Thursday, May 13 – Sunday, May 16, 2027 · <span class="count" id="countdown">May 13 kickoff</span></p>
-    <div class="cta">
-      <a class="btn btn-primary" href="survey.html#results">See the survey results</a>
-      <a class="btn" href="#bookings">What's booked</a>
-    </div>
+    <p class="sub">Thursday, May 13 – Sunday, May 16, 2027 · <b id="countdown">May 13 kickoff</b></p>
+    <p class="sub">Nothing is booked yet. Read it over, then vote at the bottom so we can start booking.</p>
   </div>
   <hr class="rule">
 </header>
 
 <main class="wrap">
-  <figure class="hero" style="margin-inline:0">
-    <img src="img/sg-sandhollow10.jpg" alt="Sand Hollow Championship course on red rock cliffs" width="1400" height="788">
-    <figcaption class="cap">Sand Hollow, Hurricane, Utah</figcaption>
-  </figure>
+  <div class="summary" aria-label="Trip highlights">
+    <figure class="tile"><img src="img/sg-strip.jpg" alt="Las Vegas at night" width="1400" height="933"><figcaption><b>Las Vegas</b><span>Thursday night</span></figcaption></figure>
+    <figure class="tile"><img src="img/santana.jpg" alt="Carlos Santana playing in Las Vegas" width="300" height="210"><figcaption><b>Santana</b><span>Thursday, House of Blues</span></figcaption></figure>
+    <figure class="tile"><img src="img/sg-blackdesert.jpg" alt="Black Desert golf course through black lava rock" width="1400" height="799"><figcaption><b>Black Desert</b><span>Saturday round</span></figcaption></figure>
+    <figure class="tile"><img src="img/sg-ph-living.jpg" alt="Living room of a Sand Hollow rental house" width="1400" height="934"><figcaption><b>Sand Hollow house</b><span>Friday and Saturday nights</span></figcaption></figure>
+  </div>
+
+  <section id="stay">
+    <div class="sec-head">
+      <span class="eyebrow">Where we're staying</span>
+      <h2>Two stops</h2>
+      <p>Fly in and out of Las Vegas. One night in Vegas, then two at a rental house at Sand Hollow.</p>
+    </div>
+    <div class="grid2">
+      <article class="card">
+        <img src="img/sg-strip.jpg" alt="Las Vegas at night" width="1400" height="933" loading="lazy">
+        <div class="card-body"><span class="eyebrow">Thu · 1 night</span><h3>Las Vegas</h3><p>A hotel close to the show, so dinner and Santana are a walk. Three rooms with two beds each.</p></div>
+      </article>
+      <article class="card">
+        <img src="img/sg-ph-view.jpg" alt="Balcony view over the fairway at Sand Hollow" width="1400" height="934" loading="lazy">
+        <div class="card-body"><span class="eyebrow">Fri–Sat · 2 nights</span><h3>Rental house at Sand Hollow Resort</h3><p>Our home base: a bedroom each, resort pools and hot tubs, and a grill for Saturday night.</p></div>
+      </article>
+    </div>
+  </section>
 
   <section id="weekend">
     <div class="sec-head">
       <span class="eyebrow">The weekend</span>
       <h2>Four days at a glance</h2>
-      <p>Fly in and out of Las Vegas. One night in Vegas, two at a rental house at Sand Hollow, two rounds. Times are local, so watch the time zone.</p>
+      <p>Times are local, so watch the time zone: Vegas and Mesquite are on Pacific time, St. George is an hour ahead.</p>
     </div>
-    <div class="days">
-      <article class="day">
+    <div class="grid2">
+      <article class="card">
         <div class="day-head"><span class="eyebrow">Thu · May 13</span><span class="day-tz">Vegas time (PT)</span></div>
         <div class="day-body">
           <h3 class="day-title">Vegas night</h3>
           <ul class="day-list">
             <li><span class="time">Day</span><span>Land at LAS. Optional round for anyone who wants to get in early.</span></li>
-            <li><span class="time">7:00 PM</span><span><a href="https://www.santana.com/" target="_blank" rel="noopener">Santana</a> at House of Blues, Mandalay Bay</span></li>
+            <li><span class="time">7:00 PM</span><span><a href="https://santana.com/" target="_blank" rel="noopener">Santana</a> at House of Blues, Mandalay Bay</span></li>
           </ul>
         </div>
       </article>
-      <article class="day">
+      <article class="card">
         <div class="day-head"><span class="eyebrow">Fri · May 14</span><span class="day-tz">Golf PT · dinner MT</span></div>
         <div class="day-body">
           <h3 class="day-title">Wolf Creek on the drive</h3>
           <ul class="day-list">
-            <li><span class="time">8:15 AM</span><span>Leave the Strip. About 1 hr 15 min to Mesquite.</span></li>
-            <li><span class="time">10:00 AM</span><span>Wolf Creek <span class="note">· foursome 10:00, twosome 10:10</span></span></li>
+            <li><span class="time">Morning</span><span>Leave the Strip. About 1 hr 15 min to Mesquite.</span></li>
+            <li><span class="time">Late morning</span><span>Wolf Creek, around 10 AM</span></li>
             <li><span class="time">Afternoon</span><span>Drive to the rental house <span class="note">· about 50 min, +1 hr into Utah time</span></span></li>
-            <li><span class="time">7:30 PM</span><span>Dinner out in St. George <span class="note">· Utah time</span></span></li>
+            <li><span class="time">Evening</span><span>Dinner out in St. George</span></li>
           </ul>
         </div>
       </article>
-      <article class="day">
+      <article class="card">
         <div class="day-head"><span class="eyebrow">Sat · May 15</span><span class="day-tz">Utah time (MT)</span></div>
         <div class="day-body">
           <h3 class="day-title">Round two, then the house</h3>
@@ -234,14 +250,14 @@ footer details{margin-top:var(--space-2)}
           </ul>
         </div>
       </article>
-      <article class="day">
+      <article class="card">
         <div class="day-head"><span class="eyebrow">Sun · May 16</span><span class="day-tz">MT → PT</span></div>
         <div class="day-body">
           <h3 class="day-title">Heading home</h3>
           <ul class="day-list">
-            <li><span class="time">8:00 AM</span><span>Leave the house <span class="note">· Utah time</span></span></li>
-            <li><span class="time">9:00 AM</span><span>At LAS <span class="note">· Vegas time, after gaining the hour back</span></span></li>
-            <li><span class="time">11:30 AM</span><span>Earliest flights home <span class="note">· East Coast: 11:30–1:30 departures, no red-eye</span></span></li>
+            <li><span class="time">Early</span><span>Leave the house around 8 AM Utah time</span></li>
+            <li><span class="time">Mid-morning</span><span>At LAS around 9 AM Vegas time <span class="note">· you gain the hour back</span></span></li>
+            <li><span class="time">Late morning</span><span>Flights home <span class="note">· East Coast: 11:30–1:30 departures, no red-eye</span></span></li>
           </ul>
         </div>
       </article>
@@ -251,63 +267,28 @@ footer details{margin-top:var(--space-2)}
   <section id="golf">
     <div class="sec-head">
       <span class="eyebrow">Golf</span>
-      <h2>Tee times</h2>
-      <p>Morning rounds, booked as a foursome and a twosome.</p>
+      <h2>Two rounds</h2>
+      <p>One on the drive out, one marquee round on Saturday morning.</p>
     </div>
-    <div class="tees">
-      <article class="tee">
+    <div class="grid2">
+      <article class="card">
         <img src="img/sg-wolfcreek.jpg" alt="Wolf Creek fairways through desert canyons" width="720" height="478" loading="lazy">
-        <div class="tee-body">
-          <div class="tee-time">10:00<small>FRI · PT</small></div>
-          <h3 class="tee-course">Wolf Creek Golf Club</h3>
-          <div class="tee-meta"><span>Mesquite, NV · 10:00 + 10:10</span><span class="chip chip-tobook">To book</span></div>
-          <p class="tee-foot">Rounds here run 5+ hours. No denim of any kind. Free changes and cancellations up to 48 hours before.</p>
+        <div class="card-body">
+          <span class="eyebrow">Friday · Mesquite, NV</span>
+          <h3>Wolf Creek Golf Club</h3>
+          <div class="when"><strong>Late morning</strong><span>around 10 AM PT</span></div>
+          <p>Elevated tees and canyon carries, right on the drive from Vegas. Rounds run 5+ hours, and there's no denim of any kind.</p>
         </div>
       </article>
-      <article class="tee">
+      <article class="card">
         <img src="img/sg-blackdesert.jpg" alt="Black Desert course through black lava rock" width="1400" height="799" loading="lazy">
-        <div class="tee-body">
-          <div class="tee-time">8:00<small>SAT · MT</small></div>
-          <h3 class="tee-course">Black Desert</h3>
-          <div class="tee-meta"><span>Ivins, UT · target 7:30–8:30</span><span class="chip chip-opens">Opens mid-April</span></div>
-          <p class="tee-foot">Public tee times open about 30 days out. Cart, forecaddie, and food and soft drinks are included. Sand Hollow, next to the house, is held as the backup.</p>
+        <div class="card-body">
+          <span class="eyebrow">Saturday · Ivins, UT</span>
+          <h3>Black Desert</h3>
+          <div class="when"><strong>Early morning</strong><span>around 8 AM MT, before the heat</span></div>
+          <p>Tom Weiskopf's final design, through black lava fields; it hosts PGA Tour and LPGA events. Cart, forecaddie, and food and soft drinks are included. Sand Hollow, next to the house, is the backup.</p>
         </div>
       </article>
-    </div>
-  </section>
-
-  <section id="stay">
-    <div class="sec-head">
-      <span class="eyebrow">Where we're staying</span>
-      <h2>Two stops</h2>
-    </div>
-    <div class="stays">
-      <article class="stay">
-        <img src="img/sg-strip.jpg" alt="Las Vegas at night" width="1400" height="933" loading="lazy">
-        <div class="stay-body"><span class="eyebrow">Thu · 1 night</span><h3>Las Vegas</h3><p>A hotel close to the show, so dinner and Santana are a walk. Three rooms with two beds each.</p></div>
-      </article>
-      <article class="stay">
-        <img src="img/sg-ph-view.jpg" alt="Balcony view over the fairway at Sand Hollow" width="1400" height="934" loading="lazy">
-        <div class="stay-body"><span class="eyebrow">Fri–Sat · 2 nights</span><h3>Rental house at Sand Hollow Resort</h3><p>Our home base: a bedroom each, resort pools and hot tubs, and a grill for Saturday night.</p></div>
-      </article>
-    </div>
-  </section>
-
-  <section id="bookings">
-    <div class="sec-head">
-      <span class="eyebrow">Bookings</span>
-      <h2>What's booked</h2>
-      <p>Everything that needs reserving, and where it stands.</p>
-    </div>
-    <div class="panel">
-      <div class="track-row"><span class="track-what">Vegas hotel, Thu May 13</span><span class="chip chip-tobook">To book</span><span class="track-who">Tyler · 3 rooms, two beds each</span></div>
-      <div class="track-row"><span class="track-what">Santana tickets × 6, Thu 7:00 PM</span><span class="chip chip-tobook">To book</span><span class="track-who">Tyler · House of Blues, Mandalay Bay</span></div>
-      <div class="track-row"><span class="track-what">Wolf Creek, Fri 10:00 + 10:10 PT</span><span class="chip chip-tobook">To book</span><span class="track-who">Tyler · call 866-252-4653 to link both groups</span></div>
-      <div class="track-row"><span class="track-what">Rental house, Sand Hollow, Fri–Sat</span><span class="chip chip-tobook">To book</span><span class="track-who">Tyler · booking it also opens Sand Hollow tee times</span></div>
-      <div class="track-row"><span class="track-what">Black Desert, Sat morning MT</span><span class="chip chip-opens">Opens mid-April</span><span class="track-who">Tyler · confirm the exact release time</span></div>
-      <div class="track-row"><span class="track-what">Sand Hollow backup, Sat morning MT</span><span class="chip chip-tobook">To book</span><span class="track-who">Tyler · cancel once Black Desert is set</span></div>
-      <div class="track-row"><span class="track-what">Dinner in St. George, Fri 7:30 PM MT</span><span class="chip chip-tobook">To book</span><span class="track-who">Table for 6</span></div>
-      <div class="track-row"><span class="track-what">Rental cars from LAS, Thu–Sun</span><span class="chip chip-tobook">To book</span><span class="track-who">Two cars or a large SUV, room for six sets of clubs</span></div>
     </div>
   </section>
 
@@ -315,16 +296,16 @@ footer details{margin-top:var(--space-2)}
     <div class="sec-head">
       <span class="eyebrow">Flights</span>
       <h2>Getting there</h2>
-      <p>Land at LAS Thursday by about 4 PM PT if you can. Sunday, book flights leaving LAS after about 11:30 AM PT.</p>
+      <p>Land at LAS Thursday by about 4 PM PT to make dinner and the show. On Sunday, look at flights leaving LAS after about 11:30 AM PT.</p>
     </div>
     <div class="panel" role="table" aria-label="Flights">
-      <div class="board-head" role="row"><span role="columnheader">Member</span><span role="columnheader">From</span><span role="columnheader">Status</span></div>
-      <div class="board-row" role="row"><span class="board-name">Tyler</span><span class="board-code">NYC</span><span class="chip chip-tobook">To book</span><span class="board-flight">Delta nonstop · Sun out 11:30 AM–1:30 PM PT</span></div>
-      <div class="board-row" role="row"><span class="board-name">Granger</span><span class="board-code">BOS</span><span class="chip chip-tobook">To book</span><span class="board-flight">Nonstop · Sun out 11:30 AM–1:30 PM PT</span></div>
-      <div class="board-row" role="row"><span class="board-name">Kyle</span><span class="board-code">CLE</span><span class="chip chip-tobook">To book</span><span class="board-flight">United nonstop flies Thu and Sun · Sun out 11:30 AM–1:30 PM PT</span></div>
-      <div class="board-row" role="row"><span class="board-name">Kevin</span><span class="board-code">DEN</span><span class="chip chip-tobook">To book</span><span class="board-flight">Nonstop · Sun out after 11:30 AM PT</span></div>
-      <div class="board-row" role="row"><span class="board-name">James</span><span class="board-code">DEN</span><span class="chip chip-tobook">To book</span><span class="board-flight">Nonstop · Sun out after 11:30 AM PT</span></div>
-      <div class="board-row" role="row"><span class="board-name">Colin</span><span class="board-code">SEA</span><span class="chip chip-tobook">To book</span><span class="board-flight">Nonstop · Sun out after 11:30 AM PT</span></div>
+      <div class="board-head" role="row"><span role="columnheader">Member</span><span role="columnheader" style="text-align:right">From</span></div>
+      <div class="board-row" role="row"><span class="board-name">Tyler</span><span class="board-code">NYC</span><span class="board-flight">Delta nonstop · Sun out 11:30 AM–1:30 PM PT</span></div>
+      <div class="board-row" role="row"><span class="board-name">Granger</span><span class="board-code">BOS</span><span class="board-flight">Nonstop · Sun out 11:30 AM–1:30 PM PT</span></div>
+      <div class="board-row" role="row"><span class="board-name">Kyle</span><span class="board-code">CLE</span><span class="board-flight">United nonstop flies Thu and Sun · Sun out 11:30 AM–1:30 PM PT</span></div>
+      <div class="board-row" role="row"><span class="board-name">Kevin</span><span class="board-code">DEN</span><span class="board-flight">Nonstop · Sun out after 11:30 AM PT</span></div>
+      <div class="board-row" role="row"><span class="board-name">James</span><span class="board-code">DEN</span><span class="board-flight">Nonstop · Sun out after 11:30 AM PT</span></div>
+      <div class="board-row" role="row"><span class="board-name">Colin</span><span class="board-code">SEA</span><span class="board-flight">Nonstop · Sun out after 11:30 AM PT</span></div>
     </div>
   </section>
 
@@ -334,7 +315,7 @@ footer details{margin-top:var(--space-2)}
       <h2>Per person, roughly</h2>
     </div>
     <p class="only"><b>Golf + accommodations only.</b> Flights, cars, food and drinks, show tickets and caddie tips are extra. Green fees are 2026 published rates.</p>
-    <div class="cost-grid">
+    <div class="grid2">
       <div class="panel">
         <table class="ledger">
           <caption>With Black Desert</caption>
@@ -364,42 +345,95 @@ footer details{margin-top:var(--space-2)}
       <h2>Good to know</h2>
     </div>
     <div class="faq">
-      <details><summary>What's the deal with time zones?</summary><p>Las Vegas and Mesquite are on Pacific time. St. George and Sand Hollow are on Mountain time, an hour ahead. You lose an hour driving out Friday and get it back Sunday. Every time on this page says which zone it's in.</p></details>
+      <details><summary>What's the deal with time zones?</summary><p>Las Vegas and Mesquite are on Pacific time. St. George and Sand Hollow are on Mountain time, an hour ahead. You lose an hour driving out Friday and get it back Sunday.</p></details>
       <details><summary>How far is everything?</summary><p>The Strip to Wolf Creek is about 1 hour 15 minutes. Wolf Creek to the house is about 50 minutes. Black Desert is about 30 minutes from the house. The house back to LAS is about 2 hours.</p></details>
       <details><summary>What should I pack for golf?</summary><p>Wolf Creek doesn't allow denim of any kind. Mid-May highs can reach the 90s, so bring sunscreen, a hat and a water bottle. Carts are included at both courses.</p></details>
-      <details><summary>Do I need a car?</summary><p>We'll get two rental cars or one large SUV at LAS with room for six sets of clubs. Coordinate in the group chat once flights are booked.</p></details>
-      <details><summary>What if my plans change?</summary><p>Wolf Creek tee times can be changed for free up until 48 hours before. Tell Tyler as early as you can so the group sizes can be adjusted; no-shows are charged full rate.</p></details>
-      <details><summary>Where's the survey?</summary><p>The survey and live results are still up. You can review the results or change your answers anytime on the <a href="survey.html#results">survey page</a>.</p></details>
+      <details><summary>Do we need cars?</summary><p>We'd get two rental cars or one large SUV at LAS with room for six sets of clubs.</p></details>
+      <details><summary>When does booking start?</summary><p>Once everyone votes "I'm in" below. The rental house, Santana tickets and Wolf Creek come first. Black Desert tee times open about 30 days out, in mid-April.</p></details>
+      <details><summary>Can I still see the survey?</summary><p>Yes. The <a href="survey.html#results">survey results</a> are still up, and you can change your answers there.</p></details>
     </div>
   </section>
 
-  <aside class="survey-link">
-    <span class="eyebrow">Survey</span>
-    <h2>How we picked this trip</h2>
-    <p>All six of us voted. St. George + Vegas won four of six first-place votes, and May 13–16 was the only weekend with no conflicts.</p>
-    <div class="cta"><a class="btn btn-primary" href="survey.html#results">See the results</a><a class="btn" href="survey.html#survey">Change your answers</a></div>
-  </aside>
+  <section id="vote">
+    <div class="sec-head">
+      <span class="eyebrow">Vote</span>
+      <h2>Are you in?</h2>
+      <p>Once all six of us are in, we start booking: the house, Santana tickets and tee times.</p>
+    </div>
+    <div class="vote">
+      <p class="tally" id="tally">Votes load here.</p>
+      <div class="roster" id="roster"></div>
+      <div style="display:grid;gap:var(--space-2)">
+        <label class="lbl" for="voter">Your name</label>
+        <select id="voter"><option value="">Choose your name</option></select>
+      </div>
+      <div style="display:grid;gap:var(--space-2)">
+        <label class="lbl" for="vnote">Anything we should know? <span style="font-weight:400;color:var(--ink-muted)">(optional)</span></label>
+        <textarea id="vnote" rows="2" maxlength="500" placeholder="A conflict, a flight constraint, a request..."></textarea>
+      </div>
+      <div class="choices">
+        <button class="choice choice-in" type="button" data-r="in">I'm in</button>
+        <button class="choice" type="button" data-r="maybe">Need to check</button>
+        <button class="choice" type="button" data-r="out">Can't make it</button>
+      </div>
+      <p class="status" id="vstatus" role="status"></p>
+    </div>
+  </section>
 </main>
 
 <footer>
   <div class="wrap">
-    <p>Kenly Golf Club · Trip No. 4 · St. George + Vegas, May 13–16, 2027. Prices are estimates from 2026 rates.</p>
+    <p>Kenly Golf Club · Trip No. 4 · Proposed: St. George + Vegas, May 13–16, 2027. Prices are estimates from 2026 rates.</p>
     <details>
       <summary>Photo credits</summary>
-      <p>Sand Hollow course and house: sandhollowresort.com. Black Desert: blackdesertresort.com. Wolf Creek: GolfPass. Las Vegas: "Las Vegas Strip from Resorts World February 2023 HDR 1", Wikimedia Commons (CC BY-SA 4.0).</p>
+      <p>Sand Hollow house: sandhollowresort.com. Black Desert: blackdesertresort.com. Wolf Creek: GolfPass. Las Vegas: "Las Vegas Strip from Resorts World February 2023 HDR 1", Wikimedia Commons (CC BY-SA 4.0). Santana: "Carlos Santana in Las Vegas", Wikimedia Commons (public domain).</p>
     </details>
   </div>
 </footer>
 
 <script>
 (function(){
-  var el=document.getElementById("countdown");
-  var start=new Date(2027,4,13), now=new Date();
-  var days=Math.ceil((start-new Date(now.getFullYear(),now.getMonth(),now.getDate()))/86400000);
-  if(days>1)el.textContent=days+" days to go";
-  else if(days===1)el.textContent="Tomorrow";
-  else if(days>-4)el.textContent="We're on the trip";
-  else el.textContent="In the books";
+  var c=document.getElementById("countdown"),start=new Date(2027,4,13),n=new Date();
+  var d=Math.ceil((start-new Date(n.getFullYear(),n.getMonth(),n.getDate()))/86400000);
+  c.textContent=d>1?d+" days to go":d===1?"Tomorrow":d>-4?"We're on the trip":"In the books";
+})();
+(function(){
+  var API="https://script.google.com/macros/s/AKfycbx0Y4t21s07eNadD248Tz4QGPHRhu1F3siWByJBWxMpyRywQ2tssxSTlgqm4vyAr1Gb/exec";
+  var GOLFERS=[["tyler","Tyler"],["granger","Granger"],["kyle","Kyle"],["kevin","Kevin"],["james","James"],["colin","Colin"]];
+  var LABEL={in:"In",maybe:"Checking",out:"Out"};
+  var $=function(s){return document.querySelector(s)};
+  var sel=$("#voter"),note=$("#vnote"),st=$("#vstatus"),btns=document.querySelectorAll(".choice");
+  GOLFERS.forEach(function(g){var o=document.createElement("option");o.value=g[0];o.textContent=g[1];sel.appendChild(o)});
+  try{var saved=localStorage.getItem("kgc2027-voter")||(JSON.parse(localStorage.getItem("kgc2027-answers")||"null")||{}).golfer;if(saved)sel.value=saved}catch(e){}
+  function status(m,k){st.textContent=m;st.className="status"+(k?" "+k:"")}
+  function render(rsvps){
+    var map={};(rsvps||[]).forEach(function(r){map[r.golfer]=r.response});
+    var ro=$("#roster");ro.textContent="";var inCount=0;
+    GOLFERS.forEach(function(g){var r=map[g[0]];if(r==="in")inCount++;
+      var d=document.createElement("div");d.className="who";var b=document.createElement("b");b.textContent=g[1];
+      var ch=document.createElement("span");ch.className="chip"+(r?" chip-"+r:"");ch.textContent=r?LABEL[r]:"No vote";d.appendChild(b);d.appendChild(ch);ro.appendChild(d)});
+    $("#tally").innerHTML="";var t=document.createElement("b");t.textContent=inCount+" of 6";$("#tally").appendChild(t);
+    $("#tally").appendChild(document.createTextNode(inCount===6?" are in. Time to book.":" are in so far."));
+  }
+  function lock(m){btns.forEach(function(b){b.disabled=true});status(m)}
+  function load(){
+    fetch(API+"?t="+Date.now()).then(function(r){return r.json()}).then(function(j){
+      if(!j.ok)throw 0;
+      if(!("rsvps" in j)){render([]);lock("Voting opens shortly.");return}
+      btns.forEach(function(b){b.disabled=false});render(j.rsvps);
+    }).catch(function(){$("#tally").textContent="Votes couldn't load right now. Try again in a minute."});
+  }
+  btns.forEach(function(b){b.addEventListener("click",function(){
+    var who=sel.value;if(!who){status("Choose your name first.","err");sel.focus();return}
+    btns.forEach(function(x){x.disabled=true});status("Saving…");
+    fetch(API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({action:"rsvp",golfer:who,response:b.dataset.r,note:note.value.trim().slice(0,500)})})
+      .then(function(r){return r.json()}).then(function(j){if(!j.ok)throw 0;
+        try{localStorage.setItem("kgc2027-voter",who)}catch(e){}
+        status(b.dataset.r==="in"?"Got it. You're in.":"Got it. Thanks for letting us know.","ok");note.value="";load()})
+      .catch(function(){status("Couldn't save your vote. Check your connection and try again.","err")})
+      .then(function(){btns.forEach(function(x){x.disabled=false})});
+  })});
+  render([]);load();
 })();
 </script>
 </body>

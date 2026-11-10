@@ -22,6 +22,8 @@ const RESPONSE_HEADERS = ['Golfer', 'Updated']
   .concat(DESTS.map(d => d[1]))
   .concat(['#1 pick', 'Notes']);
 const COMMENT_HEADERS = ['Posted', 'Golfer', 'Destination', 'Comment'];
+const RSVP_HEADERS = ['Golfer', 'Updated', 'Response', 'Note'];
+const RSVP = { in: "I'm in", maybe: 'Need to check', out: "Can't make it" };
 
 function sheet_(name, headers) {
   const ss = SpreadsheetApp.getActive();
@@ -36,11 +38,13 @@ function sheet_(name, headers) {
 }
 function responses_() { return sheet_('Responses', RESPONSE_HEADERS); }
 function comments_() { return sheet_('Comments', COMMENT_HEADERS); }
+function rsvps_() { return sheet_('RSVP', RSVP_HEADERS); }
 
 /** Run once from the editor to create the tabs (optional; they are also created on first use). */
 function setup() {
   responses_();
   comments_();
+  rsvps_();
   const first = SpreadsheetApp.getActive().getSheetByName('Sheet1');
   if (first && first.getLastRow() === 0 && SpreadsheetApp.getActive().getSheets().length > 1) {
     SpreadsheetApp.getActive().deleteSheet(first);
@@ -69,10 +73,16 @@ function doGet() {
     dest: destKey[r[2]] || '',
     text: String(r[3])
   }));
-  return json_({ ok: true, count: tallies.length, tallies, comments });
+  const rsvpKey = invert_(RSVP), golferKey = invert_(GOLFERS);
+  const rsvps = rsvps_().getDataRange().getValues().slice(1).filter(r => r[0] && rsvpKey[r[2]]).map(r => ({
+    golfer: golferKey[r[0]] || '',
+    response: rsvpKey[r[2]]
+  }));
+  return json_({ ok: true, count: tallies.length, tallies, comments, rsvps });
 }
 
-/** POST (text/plain JSON): {action:"submit", ...answers} or {action:"comment", golfer, dest, text}. */
+/** POST (text/plain JSON): {action:"submit", ...answers}, {action:"comment", golfer, dest, text}
+ *  or {action:"rsvp", golfer, response: "in" | "maybe" | "out", note}. */
 function doPost(e) {
   let body;
   try { body = JSON.parse(e.postData.contents); } catch (err) { return json_({ ok: false, error: 'bad_json' }); }
@@ -103,6 +113,17 @@ function doPost(e) {
       const sh = comments_();
       if (sh.getLastRow() > 1000) return json_({ ok: false, error: 'full' });
       sh.appendRow([new Date(), golfer, dest, text]);
+      return json_({ ok: true });
+    }
+    if (body.action === 'rsvp') {
+      const response = RSVP[body.response];
+      if (!response) return json_({ ok: false, error: 'bad_rsvp' });
+      const row = [golfer, new Date(), response, String(body.note || '').slice(0, 500)];
+      const sh = rsvps_();
+      const names = sh.getRange(1, 1, Math.max(sh.getLastRow(), 1), 1).getValues().map(v => v[0]);
+      const idx = names.indexOf(golfer);
+      if (idx > 0) sh.getRange(idx + 1, 1, 1, row.length).setValues([row]);
+      else sh.appendRow(row);
       return json_({ ok: true });
     }
     return json_({ ok: false, error: 'unknown_action' });
