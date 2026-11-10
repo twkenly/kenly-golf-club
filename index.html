@@ -85,6 +85,9 @@ section{padding-block:var(--space-12) 0}
 .sec-head p{margin:0;color:var(--ink-muted);max-width:60ch}
 
 .grid2{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--space-4)}
+.house-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-2);margin-top:var(--space-4)}
+.house-gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--radius-sm)}
+.card-body p a{white-space:nowrap}
 .card{background:var(--ground-raised);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
 .card>img{width:100%;aspect-ratio:3/2;object-fit:cover}
 .card-body{padding:var(--space-4);display:grid;gap:var(--space-2)}
@@ -157,6 +160,7 @@ footer details{margin-top:var(--space-2)}
 @media (min-width:720px){
   .summary{grid-template-columns:repeat(4,minmax(0,1fr))}
   .grid2{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .house-gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
   section{padding-block:var(--space-16) 0}
   .day-head,.day-body,.card-body{padding-left:var(--space-6);padding-right:var(--space-6)}
 }
@@ -182,14 +186,14 @@ footer details{margin-top:var(--space-2)}
     <figure class="tile"><img src="img/sg-strip.jpg" alt="Las Vegas at night" width="1400" height="933"><figcaption><b>Las Vegas</b><span>Thursday night</span></figcaption></figure>
     <figure class="tile"><img src="img/santana.jpg" alt="Carlos Santana playing guitar on stage" width="640" height="427"><figcaption><b>Santana</b><span>Thursday, House of Blues</span></figcaption></figure>
     <figure class="tile"><img src="img/sg-blackdesert.jpg" alt="Black Desert golf course through black lava rock" width="1400" height="799"><figcaption><b>Black Desert</b><span>Saturday round</span></figcaption></figure>
-    <figure class="tile"><img src="img/sg-ph-living.jpg" alt="Living room of a Sand Hollow rental house" width="1400" height="934"><figcaption><b>Sand Hollow house</b><span>Friday and Saturday nights</span></figcaption></figure>
+    <figure class="tile"><img src="img/19-firepit.jpg" alt="Fire pit and seating at the 19th Hole rental house" width="1400" height="933"><figcaption><b>The 19th Hole</b><span>Our house, Friday and Saturday</span></figcaption></figure>
   </div>
 
   <section id="stay">
     <div class="sec-head">
       <span class="eyebrow">Where we're staying</span>
       <h2>Two stops</h2>
-      <p>Fly in and out of Las Vegas. One night in Vegas, then two at a rental house at Sand Hollow.</p>
+      <p>Fly in and out of Las Vegas. One night in Vegas, then two at the 19th Hole, a rental house at Sand Hollow.</p>
     </div>
     <div class="grid2">
       <article class="card">
@@ -197,9 +201,15 @@ footer details{margin-top:var(--space-2)}
         <div class="card-body"><span class="eyebrow">Thu · 1 night</span><h3>Las Vegas</h3><p>A hotel close to the show, so dinner and Santana are a walk. Three rooms with two beds each.</p></div>
       </article>
       <article class="card">
-        <img src="img/sg-ph-view.jpg" alt="Balcony view over the fairway at Sand Hollow" width="1400" height="934" loading="lazy">
-        <div class="card-body"><span class="eyebrow">Fri–Sat · 2 nights</span><h3>Rental house at Sand Hollow Resort</h3><p>Our home base: a bedroom each, resort pools and hot tubs, and a grill for Saturday night.</p></div>
+        <img src="img/19-patio.jpg" alt="Covered back patio at the 19th Hole" width="1200" height="800" loading="lazy">
+        <div class="card-body"><span class="eyebrow">Fri–Sat · 2 nights · Leading option</span><h3>The 19th Hole, Sand Hollow Resort</h3><p>Five bedrooms and no bunk beds: two kings and three queens, 4.5 baths. Covered back patio, fire pit with desert views, grill, foosball, and paddleboards and bikes. Resort pools and hot tubs nearby.</p><p><b style="color:var(--ink)">$1,442 total</b> for May 14–16 with taxes and fees, about $240 each. Not booked yet. <a href="https://vacationrentals.sandhollowresort.com/vacation-rentals/19th-hole" target="_blank" rel="noopener">See the listing</a></p></div>
       </article>
+    </div>
+    <div class="house-gallery" aria-label="More photos of the 19th Hole">
+      <img src="img/19-exterior.jpg" alt="Front of the 19th Hole house" width="1200" height="674" loading="lazy">
+      <img src="img/19-living.jpg" alt="Living room" width="1200" height="801" loading="lazy">
+      <img src="img/19-dining.jpg" alt="Dining room for eight" width="1200" height="801" loading="lazy">
+      <img src="img/19-bedroom.jpg" alt="King bedroom" width="1200" height="800" loading="lazy">
     </div>
   </section>
 
@@ -314,9 +324,9 @@ footer details{margin-top:var(--space-2)}
           <caption>With Black Desert</caption>
           <tr><td>Wolf Creek</td><td>$360–390</td></tr>
           <tr><td>Black Desert<small>Includes forecaddie, cart and food</small></td><td>$450</td></tr>
-          <tr><td>Rental house, 2 nights<small>Split six ways, with taxes and fees</small></td><td>$275–315</td></tr>
+          <tr><td>The 19th Hole, 2 nights<small>$1,442 total with taxes and fees, split six ways</small></td><td>$240</td></tr>
           <tr><td>Vegas hotel, 1 night</td><td>$200–300</td></tr>
-          <tr class="total"><td>Estimate</td><td>~$1,285–1,455</td></tr>
+          <tr class="total"><td>Estimate</td><td>~$1,250–1,380</td></tr>
         </table>
       </div>
       <div class="panel">
@@ -324,9 +334,9 @@ footer details{margin-top:var(--space-2)}
           <caption>With Sand Hollow instead</caption>
           <tr><td>Wolf Creek</td><td>$360–390</td></tr>
           <tr><td>Sand Hollow Championship<small>About 20% off as resort guests</small></td><td>$150–185</td></tr>
-          <tr><td>Rental house, 2 nights<small>Split six ways, with taxes and fees</small></td><td>$275–315</td></tr>
+          <tr><td>The 19th Hole, 2 nights<small>$1,442 total with taxes and fees, split six ways</small></td><td>$240</td></tr>
           <tr><td>Vegas hotel, 1 night</td><td>$200–300</td></tr>
-          <tr class="total"><td>Estimate</td><td>~$985–1,190</td></tr>
+          <tr class="total"><td>Estimate</td><td>~$950–1,115</td></tr>
         </table>
       </div>
     </div>
@@ -341,6 +351,7 @@ footer details{margin-top:var(--space-2)}
       <details><summary>What's the deal with time zones?</summary><p>Las Vegas and Mesquite are on Pacific time. St. George and Sand Hollow are on Mountain time, an hour ahead. You lose an hour driving out Friday and get it back Sunday.</p></details>
       <details><summary>How far is everything?</summary><p>The Strip to Wolf Creek is about 1 hour 15 minutes. Wolf Creek to the house is about 50 minutes. Black Desert is about 30 minutes from the house. The house back to LAS is about 2 hours.</p></details>
       <details><summary>What should I pack for golf?</summary><p>Wolf Creek doesn't allow denim of any kind. Mid-May highs can reach the 90s, so bring sunscreen, a hat and a water bottle. Carts are included at both courses.</p></details>
+      <details><summary>What are the house rules?</summary><p>Check-in is 4 PM and check-out is 11 AM. Quiet hours are 10 PM to 6 AM, and there's no smoking anywhere on the property, patio included. Cars go in the garage or driveway; overnight street parking is a $250 fine. Breaking the rules can mean fines or getting removed with no refund.</p></details>
       <details><summary>Do we need cars?</summary><p>We'd get two rental cars or one large SUV at LAS with room for six sets of clubs.</p></details>
       <details><summary>When does booking start?</summary><p>Once everyone gives the plan a thumbs up in the group text, by Friday, Nov 13. The rental house, Santana tickets and Wolf Creek come first. Black Desert tee times open about 30 days out, in mid-April.</p></details>
       <details><summary>Can I still see the survey?</summary><p>Yes. The <a href="survey.html#results">survey results</a> are still up, and you can change your answers there.</p></details>
@@ -368,7 +379,7 @@ footer details{margin-top:var(--space-2)}
     <p>Kenly Golf Club · Trip No. 4 · Proposed: St. George + Vegas, May 13–16, 2027. Prices are estimates from 2026 rates.</p>
     <details>
       <summary>Photo credits</summary>
-      <p>Sand Hollow house: sandhollowresort.com. Black Desert: blackdesertresort.com. Wolf Creek: GolfPass. Las Vegas: "Las Vegas Strip from Resorts World February 2023 HDR 1", Wikimedia Commons (CC BY-SA 4.0). Santana: supplied by Tyler.</p>
+      <p>19th Hole and Sand Hollow: Vacation Rentals at Sand Hollow Resort. Black Desert: blackdesertresort.com. Wolf Creek: GolfPass. Las Vegas: "Las Vegas Strip from Resorts World February 2023 HDR 1", Wikimedia Commons (CC BY-SA 4.0). Santana: supplied by Tyler.</p>
     </details>
   </div>
 </footer>
