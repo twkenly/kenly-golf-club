@@ -5,8 +5,9 @@ https://twkenly.github.io/kenly-golf-club/
 
 ## Spring 2027
 
-`index.html` is the current trip: three destination options with detail pages
-(`#st-george`, `#scottsdale`, `#pebble-beach`), a survey and live results.
+`index.html` is the trip itinerary: St. George + Vegas, May 13–16, 2027.
+`survey.html` is the original survey: the three destination options with detail
+pages (`#st-george`, `#scottsdale`, `#pebble-beach`), the survey and live results.
 
 ### Survey backend
 
@@ -16,4 +17,4 @@ and comments; names and notes stay in the Sheet.
 
 To redeploy the script: open the Sheet, Extensions > Apps Script, paste
 `apps-script/Code.gs`, then Deploy > Manage deployments > Edit > New version.
-The web app URL is set in `index.html` as `API_URL`.
+The web app URL is set in `survey.html` as `API_URL`.

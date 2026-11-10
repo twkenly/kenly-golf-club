@@ -1,0 +1,926 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Kenly Golf Club spring 2027 trip: three options, a quick survey, and live results.">
+<meta property="og:title" content="Kenly Golf Club · Spring 2027">
+<meta property="og:description" content="Three options, seven weekends. Take the two-minute survey.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://twkenly.github.io/kenly-golf-club/survey.html">
+<meta property="og:image" content="https://twkenly.github.io/kenly-golf-club/img/kgc-share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Kenly Golf Club logo">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://twkenly.github.io/kenly-golf-club/img/kgc-share.jpg">
+<meta name="theme-color" content="#1E4632">
+<title>KGC Spring Trip 2027</title>
+<link rel="icon" type="image/png" href="img/kgc-logo.png">
+<link rel="apple-touch-icon" href="img/kgc-touch.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a members' clubhouse ledger. Green masthead, ivory pages, availability drawn as a scorecard. Detail pages open by link (#st-george etc). */
+:root{
+  --paper:#F2F2EA; --card:#FBFBF6; --ink:#17221C; --muted:#56645B; --line:#D3D4C6;
+  --club:#1E4632; --club-ink:#EEF0E4; --club-soft:#2C5A42; --gold:#D9BD7E;
+  --accent:#1E5A3C; --brass:#9C7430; --brass-soft:#EFE5CF;
+  --yes:#2E7A4C; --yes-bg:#DCEBDF; --maybe:#A9781F; --maybe-bg:#F3E6C8; --no:#A5463A; --no-bg:#F2DAD5;
+  --display:"Libre Caslon Display","Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --serif:"Libre Caslon Text",Georgia,"Times New Roman",serif;
+  --sans:"Libre Franklin","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#0F1712; --card:#16211A; --ink:#E8E9DE; --muted:#A3AEA5; --line:#2C3A31;
+  --club:#163323; --club-ink:#EEF0E4; --club-soft:#21452F; --gold:#D9BD7E;
+  --accent:#8CC4A2; --brass:#D4AE68; --brass-soft:#3A3120;
+  --yes:#7CC796; --yes-bg:#1E3626; --maybe:#E0B862; --maybe-bg:#3A3019; --no:#E58C7F; --no-bg:#3C221E;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#0F1712; --card:#16211A; --ink:#E8E9DE; --muted:#A3AEA5; --line:#2C3A31;
+  --club:#163323; --club-ink:#EEF0E4; --club-soft:#21452F; --gold:#D9BD7E;
+  --accent:#8CC4A2; --brass:#D4AE68; --brass-soft:#3A3120;
+  --yes:#7CC796; --yes-bg:#1E3626; --maybe:#E0B862; --maybe-bg:#3A3019; --no:#E58C7F; --no-bg:#3C221E;
+  color-scheme:dark}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+img{max-width:100%}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.55;margin:0}
+.wrap{max-width:1100px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--display);font-weight:400;text-wrap:balance;margin:0;line-height:1.1}
+h2{font-size:clamp(1.9rem,4.2vw,2.7rem)}
+h3{font-family:var(--serif);font-weight:700;font-size:1.12rem;line-height:1.25}
+p{margin:0}
+a{color:var(--accent)}
+.eyebrow{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--brass)}
+.muted{color:var(--muted)}
+:focus-visible{outline:2px solid var(--brass);outline-offset:2px}
+.btn{font:600 .92rem var(--sans);border-radius:3px;padding:11px 18px;border:1px solid transparent;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.btn-gold{background:#C9A55C;color:#17221C}
+.btn-gold:hover{background:#D7B670}
+.btn-line{border-color:var(--club-ink);color:var(--club-ink);background:transparent}
+.btn-primary{background:var(--club);color:var(--club-ink)}
+.btn-primary:hover{background:var(--club-soft)}
+.btn-primary[disabled]{opacity:.5;cursor:not-allowed}
+.chip{display:inline-block;font-size:.72rem;font-weight:600;letter-spacing:.04em;padding:3px 8px;border-radius:999px;white-space:nowrap}
+.chip-only{background:var(--brass-soft);color:var(--brass)}
+.req{background:var(--club);color:var(--club-ink)}
+.opt{background:var(--brass-soft);color:var(--brass)}
+.sub{font-size:.74rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:20px}
+.table-scroll{overflow-x:auto}
+.status{font-size:.85rem;color:var(--muted);min-height:1.3em}
+.status.err{color:var(--no)} .status.ok{color:var(--yes)}
+
+/* masthead */
+.mast{background:var(--club);color:var(--club-ink)}
+.mast{padding-top:env(safe-area-inset-top,0px)}
+.mast .wrap{padding-block:24px 36px;display:grid;gap:24px;grid-template-columns:minmax(0,1fr)}
+.mast-top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--club-soft);padding-bottom:16px}
+.crest{display:flex;align-items:center;gap:12px;color:var(--club-ink);text-decoration:none}
+.crest img{width:64px;height:auto;flex:none;filter:drop-shadow(1.5px 0 0 #F1EEE2) drop-shadow(-1.5px 0 0 #F1EEE2) drop-shadow(0 1.5px 0 #F1EEE2) drop-shadow(0 -1.5px 0 #F1EEE2)}
+.crest b{font-family:var(--serif);font-size:1rem;letter-spacing:.06em;display:block}
+.crest span{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;opacity:.75}
+.mast nav{display:flex;gap:6px 18px;flex-wrap:wrap;font-size:.85rem}
+.mast nav a{color:var(--club-ink);text-decoration:none;opacity:.85}
+.mast nav a:hover{opacity:1;text-decoration:underline}
+.mast h1{font-size:clamp(2.4rem,6.4vw,4.2rem);max-width:15ch}
+.mast h1 em{font-family:var(--serif);font-style:italic;color:var(--gold)}
+.mast-grid{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:32px;align-items:end}
+.mast-lede{font-family:var(--serif);font-size:1.1rem;max-width:54ch;opacity:.95;margin-top:12px}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid var(--club-soft);margin:0}
+.facts div{padding:11px 0;border-bottom:1px solid var(--club-soft)}
+.facts dt{font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;opacity:.7}
+.facts dd{margin:2px 0 0;font-family:var(--serif);font-size:1rem}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:20px}
+.resp-pill{font-size:.85rem;opacity:.9}
+
+section.block{padding-block:52px;border-bottom:1px solid var(--line)}
+.sec-head{display:grid;gap:10px;margin-bottom:26px;max-width:70ch}
+.sec-head p{font-family:var(--serif);font-size:1.04rem;color:var(--muted)}
+
+/* option summary cards */
+.opts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.card .pics{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:3px;aspect-ratio:16/10}
+.card .pics img{width:100%;height:100%;object-fit:cover;display:block;min-height:0}
+.card .pics img:first-child{grid-row:1/3}
+.card .body{padding:18px;display:grid;gap:10px;align-content:start;grid-template-rows:auto auto 1fr auto auto}
+.card .rank{font-family:var(--mono);font-size:.74rem;color:var(--brass);letter-spacing:.08em}
+.card h3{font-family:var(--display);font-weight:400;font-size:1.6rem}
+.card p{font-size:.93rem;color:var(--muted)}
+.price-line{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:12px}
+.price-line b{font-family:var(--mono);font-weight:500;font-size:1.25rem}
+.card .go{font-weight:600;font-size:.92rem;text-decoration:none}
+.card .go:hover{text-decoration:underline}
+.incl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;margin-top:20px}
+.incl div{font-size:.9rem;padding:14px 16px;border-radius:4px}
+.incl .in{background:var(--yes-bg)} .incl .out{background:var(--card);border:1px solid var(--line)}
+.incl b{display:block;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:4px}
+.incl .in b{color:var(--yes)} .incl .out b{color:var(--muted)}
+
+/* survey */
+.survey{display:grid;gap:22px;grid-template-columns:minmax(0,1fr)}
+.q{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:20px;display:grid;gap:14px;grid-template-columns:minmax(0,1fr)}
+.q legend,.q .qt{font-family:var(--serif);font-weight:700;font-size:1.06rem;padding:0}
+.q .hint{font-size:.88rem;color:var(--muted);margin-top:-8px}
+fieldset{border:0;margin:0;padding:0;min-width:0}
+.rows{display:grid}
+.row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;align-items:center;padding:10px 0;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row .lbl b{font-family:var(--mono);font-weight:500;font-size:.95rem}
+.row .lbl small{display:block;color:var(--muted);font-size:.8rem}
+.rate-rows .row .lbl b{font-family:var(--serif);font-weight:700}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:3px;overflow:hidden;flex-wrap:wrap}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{font-size:.82rem;font-weight:600;padding:7px 11px;cursor:pointer;border-left:1px solid var(--line);color:var(--muted);user-select:none}
+.seg label:first-of-type{border-left:0}
+.seg input:focus-visible+label{outline:2px solid var(--brass);outline-offset:-2px}
+.seg input[value=yes]:checked+label,.seg input[value=love]:checked+label{background:var(--yes-bg);color:var(--yes)}
+.seg input[value=maybe]:checked+label,.seg input[value=cool]:checked+label{background:var(--maybe-bg);color:var(--maybe)}
+.seg input[value=no]:checked+label{background:var(--no-bg);color:var(--no)}
+.choices{display:flex;flex-wrap:wrap;gap:8px}
+.choice{position:relative}
+.choice input{position:absolute;opacity:0;pointer-events:none}
+.choice label{display:block;border:1px solid var(--line);border-radius:3px;padding:9px 12px;cursor:pointer;font-size:.9rem;background:var(--paper)}
+.choice label small{display:block;color:var(--muted);font-size:.78rem}
+.choice input:checked+label{border-color:var(--accent);background:var(--yes-bg)}
+.choice input:focus-visible+label{outline:2px solid var(--brass);outline-offset:2px}
+textarea,select{font:inherit;font-size:.95rem;color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:3px;padding:9px 10px;width:100%}
+textarea{resize:vertical;min-height:44px}
+.save-bar{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.lock{font-size:.9rem;padding:12px 14px;border-radius:4px;background:var(--brass-soft);margin-bottom:16px}
+
+/* results */
+.results{display:grid;gap:24px;grid-template-columns:minmax(0,1fr)}
+.score-wrap{overflow-x:auto;background:var(--card);border:1px solid var(--line);border-radius:4px}
+.score-wrap{max-width:640px}
+.scorecard{border-collapse:collapse;width:100%;font-variant-numeric:tabular-nums;font-size:.95rem}
+.scorecard th,.scorecard td{border-bottom:1px solid var(--line);padding:12px 10px;text-align:center}
+.scorecard thead th{background:var(--club);color:var(--club-ink);font-weight:600;font-size:.74rem;letter-spacing:.04em;line-height:1.25;vertical-align:bottom}
+.scorecard tbody th{text-align:left;font-family:var(--mono);font-weight:500;white-space:nowrap}
+.scorecard td{font-family:var(--mono);font-size:1.05rem;width:22%}
+.scorecard tr.best{background:var(--yes-bg)}
+.scorecard tbody tr:last-child th,.scorecard tbody tr:last-child td{border-bottom:0}
+.c-yes{color:var(--yes)} .c-maybe{color:var(--maybe)} .c-no{color:var(--no)}
+.cap{font-size:.78rem;color:var(--muted);margin-top:6px}
+.r-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;max-width:640px}
+.r-grid .panel h3{margin-bottom:10px}
+.d-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:4px 10px;padding:8px 0;border-top:1px solid var(--line);font-size:.9rem}
+.d-row:first-of-type{border-top:0}
+.d-row .pts{font-family:var(--mono)}
+.stack{display:flex;height:12px;width:100%;grid-column:1/3;border-radius:2px;overflow:hidden;background:var(--line)}
+.stack i{display:block;height:100%}
+.s-love{background:var(--yes)} .s-cool{background:var(--maybe)} .s-no{background:var(--no)}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:.78rem;color:var(--muted);margin-top:12px}
+.legend span::before{content:"";display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:6px;vertical-align:-1px;background:var(--c)}
+.cnt-row{display:flex;justify-content:space-between;gap:10px;font-size:.9rem;padding:7px 0;border-top:1px solid var(--line)}
+.cnt-row:first-of-type{border-top:0}
+.cnt-row b{font-family:var(--mono);font-weight:500}
+.empty{font-family:var(--serif);color:var(--muted);font-style:italic}
+.owner{border:1px solid var(--brass);border-radius:4px;padding:20px;background:var(--card)}
+.owner table{border-collapse:collapse;font-size:.82rem;min-width:820px;width:100%}
+.owner th,.owner td{border-top:1px solid var(--line);padding:7px 8px;text-align:left;vertical-align:top}
+.owner th{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.g-y{color:var(--yes);font-weight:700} .g-m{color:var(--maybe);font-weight:700} .g-n{color:var(--no);font-weight:700}
+
+/* detail pages */
+.detail{padding-block:28px 64px}
+.back{display:inline-flex;gap:6px;font-size:.9rem;font-weight:600;text-decoration:none;margin-bottom:20px}
+.d-head{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:20px}
+.d-head p{font-family:var(--serif);font-size:1.06rem;color:var(--muted);max-width:62ch;margin-top:10px}
+.price-tag{border-left:2px solid var(--brass);padding-left:14px}
+.price-tag b{font-family:var(--mono);font-weight:500;font-size:1.5rem;display:block}
+.price-tag span{font-size:.78rem;color:var(--muted)}
+.hero-img{width:100%;aspect-ratio:16/7;object-fit:cover;border-radius:4px;display:block;max-width:100%}
+.d-sec{margin-top:44px;display:grid;gap:16px;grid-template-columns:minmax(0,1fr)}
+.d-sec>h2{font-size:clamp(1.5rem,3vw,2rem)}
+.d-sec>.lead{color:var(--muted);font-family:var(--serif);max-width:66ch}
+.courses{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.course{background:var(--card);border:1px solid var(--line);border-radius:4px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.course img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.course .body{padding:14px;display:grid;gap:6px;align-content:start}
+.course .meta{display:flex;justify-content:space-between;gap:8px;align-items:center;flex-wrap:wrap}
+.course p{font-size:.9rem;color:var(--muted)}
+.fee{font-family:var(--mono);font-size:.84rem}
+.stay{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:20px;align-items:start}
+.gallery{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:4px;aspect-ratio:16/10;border-radius:4px;overflow:hidden}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;min-height:0}
+.gallery img:first-child{grid-row:1/3}
+.facts-list{display:grid;gap:8px;font-size:.92rem}
+.facts-list div{display:flex;justify-content:space-between;gap:12px;border-bottom:1px dotted var(--line);padding-bottom:6px}
+.facts-list span:last-child{text-align:right;font-weight:600}
+.cost{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:start}
+.ledger{font-size:.9rem;width:100%;border-collapse:collapse}
+.ledger td{padding:8px 0;border-bottom:1px dotted var(--line);vertical-align:top}
+.ledger td small{display:block;color:var(--muted);font-size:.78rem}
+.ledger td:last-child{text-align:right;font-family:var(--mono);font-variant-numeric:tabular-nums;white-space:nowrap;padding-left:12px}
+.ledger tr.total td{font-weight:700;border-bottom:0;border-top:1.5px solid var(--ink);padding-top:10px}
+.ledger tr.total td:last-child{font-size:1.05rem}
+.picker{display:grid;gap:8px}
+.pick{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:3px;background:var(--paper);cursor:pointer;font-size:.92rem}
+.pick input{width:18px;height:18px;accent-color:var(--club)}
+.pick:has(input:checked){border-color:var(--accent);background:var(--yes-bg)}
+.pick .fee{color:var(--muted)}
+.only{font-size:.88rem;padding:12px 14px;border-radius:4px;background:var(--brass-soft)}
+.only b{color:var(--brass)}
+.days{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:4px;background:var(--card)}
+.day{padding:14px;border-left:1px solid var(--line);display:grid;gap:4px;align-content:start}
+.day:first-child{border-left:0}
+.day b{font-family:var(--mono);font-size:.78rem;color:var(--brass);letter-spacing:.08em;font-weight:500}
+.day h4{margin:0;font-family:var(--serif);font-size:1rem}
+.day p{font-size:.87rem;color:var(--muted)}
+.foot{font-size:.8rem;color:var(--muted)}
+.acts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}
+.act{position:relative;border-radius:4px;overflow:hidden;background:var(--club)}
+.act img{width:100%;aspect-ratio:3/2;object-fit:cover;display:block}
+.act span{position:absolute;left:0;right:0;bottom:0;padding:26px 12px 10px;font-size:.88rem;font-weight:600;color:#fff;background:linear-gradient(transparent,rgba(10,20,14,.85))}
+.faq{display:grid;border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;padding:14px 4px;font-family:var(--serif);font-weight:700;font-size:1rem;list-style:none;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--mono);color:var(--brass);font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq details p{padding:0 4px 16px;font-size:.93rem;color:var(--muted);max-width:72ch}
+.talk{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+.c-list{display:grid;gap:10px;list-style:none;margin:0;padding:0}
+.c-list li{background:var(--card);border:1px solid var(--line);border-radius:4px;padding:10px 12px;font-size:.92rem}
+.c-list li b{font-weight:600}
+.c-list li time{font-size:.75rem;color:var(--muted);margin-left:6px}
+.c-list li p{margin-top:2px;white-space:pre-wrap;overflow-wrap:anywhere}
+.c-name{max-width:220px}
+.c-form{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;align-items:end}
+.d-cta{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:44px;padding:20px;border-radius:4px;background:var(--club);color:var(--club-ink)}
+.d-cta p{font-family:var(--serif);font-size:1.05rem;flex:1 1 260px}
+
+footer{padding-block:36px;font-size:.78rem;color:var(--muted)}
+footer details{margin-top:8px}
+footer li{margin:2px 0}
+
+@media (max-width:900px){
+  .opts{grid-template-columns:minmax(0,1fr)}
+  .mast-grid,.stay,.cost,.r-grid,.incl{grid-template-columns:minmax(0,1fr)}
+  .courses{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .days{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .day:nth-child(3){border-left:0}
+  .day:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:560px){
+  body{font-size:17px}
+  section.block{padding-block:40px}
+  .sec-head{margin-bottom:20px}
+  .mast .wrap{padding-block:16px 28px;gap:18px}
+  .mast-top{padding-bottom:12px}
+  .crest img{width:52px}
+  .mast nav{gap:4px 14px;font-size:.88rem}
+  .mast-grid{gap:20px}
+  .facts{grid-template-columns:minmax(0,1fr)}
+  .facts div{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:10px 0}
+  .facts dd{text-align:right;margin:0}
+  .mast-lede{font-size:1.05rem;line-height:1.5}
+  .cta-row{gap:10px}
+  .cta-row .btn{flex:1 1 140px;justify-content:center;padding:13px 14px}
+  .resp-pill{flex-basis:100%}
+  .card .body{padding:18px 16px 20px;gap:12px}
+  .card p{font-size:1rem;line-height:1.55}
+  .price-line{flex-direction:column;align-items:flex-start;gap:6px}
+  .q{padding:18px 16px}
+  .row{gap:10px;padding:14px 0}
+  .seg{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));width:100%}
+  .seg label{padding:12px 6px;text-align:center;font-size:.84rem;line-height:1.2;display:flex;align-items:center;justify-content:center}
+  .choices{display:grid;grid-template-columns:minmax(0,1fr)}
+  .choice label{padding:13px 14px;font-size:1rem}
+  .save-bar .btn{width:100%;justify-content:center;padding:14px}
+  .detail{padding-block:20px 48px}
+  .d-head{margin-bottom:16px}
+  .d-head p{font-size:1.02rem}
+  .d-sec{margin-top:36px}
+  .day{padding:14px 16px}
+  .pick{padding:13px 12px}
+  .facts-list div{flex-direction:column;gap:2px}
+  .facts-list span:last-child{text-align:left}
+  .faq summary{padding:16px 2px;font-size:1.02rem}
+  .faq details p{font-size:.98rem;line-height:1.6}
+  .d-cta{flex-direction:column;align-items:stretch;text-align:left}
+  .d-cta .btn{justify-content:center}
+  .courses{grid-template-columns:minmax(0,1fr)}
+  .row{grid-template-columns:minmax(0,1fr)}
+  .hero-img{aspect-ratio:4/3}
+  .c-form{grid-template-columns:minmax(0,1fr)}
+  .seg label{padding:7px 9px}
+  .days{grid-template-columns:minmax(0,1fr)}
+  .day{border-left:0!important}
+  .day+.day{border-top:1px solid var(--line)}
+}
+</style>
+</head>
+<body>
+<header class="mast">
+  <div class="wrap">
+    <div class="mast-top">
+      <a class="crest" href="#options">
+        <img src="img/kgc-logo.png" alt="" width="64" height="61">
+        <div><b>Kenly Golf Club</b><span>Annual Trip · Spring 2027</span></div>
+      </a>
+      <nav aria-label="Sections"><a href="./">Itinerary</a><a href="#options">Options</a><a href="#survey">Survey</a><a href="#results">Results</a></nav>
+    </div>
+    <div class="mast-grid" id="mastHome">
+      <div>
+        <p class="eyebrow" style="color:var(--gold)">Trip No. 4 · Spring 2027</p>
+        <h1>Where are we <em>teeing it up</em> next?</h1>
+        <p class="mast-lede">Three options, seven possible weekends, one place for all six of us. Skim the options, then take the two-minute survey so we can lock in a destination and a weekend.</p>
+        <div class="cta-row">
+          <a class="btn btn-gold" href="#survey">Take the survey</a>
+          <a class="btn btn-line" href="#results">See live results</a>
+          <span class="resp-pill" id="respCount">Responses load when you're signed in</span>
+        </div>
+      </div>
+      <dl class="facts">
+        <div><dt>When</dt><dd>Mid-March to mid-May, Thu or Fri to Sun</dd></div>
+        <div><dt>Golf</dt><dd>At least two rounds</dd></div>
+        <div><dt>Home base</dt><dd>One place for all six, a bed each</dd></div>
+        <div><dt>Prices shown</dt><dd>Golf + accommodations only</dd></div>
+      </dl>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HOME VIEW ============ -->
+<main id="view-home">
+<section class="block" id="options">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">The options · least to most expensive</span>
+      <h2>Three ways to spend a spring weekend</h2>
+      <p>Open any option for the full potential itinerary, the cost breakdown and FAQs.</p>
+    </div>
+    <div class="opts">
+      <article class="card">
+        <div class="pics"><img src="img/sg-sandhollow10.jpg" alt="Sand Hollow Championship course on red rock"><img src="img/sg-ph-living.jpg" alt="Living room in the Sand Hollow penthouse" loading="lazy"><img src="img/sg-strip.jpg" alt="Las Vegas at night" loading="lazy"></div>
+        <div class="body">
+          <span class="rank">OPTION 1 · FLY IN AND OUT OF LAS VEGAS</span>
+          <h3>St. George + Vegas</h3>
+          <p>Fly in and out of Vegas and spend one night there for a concert, a show or a casino night. The other two nights are in a big rental at Sand Hollow, and we pick two rounds from Black Desert, Sand Hollow and Wolf Creek.</p>
+          <div class="price-line"><b>~$1,000–1,500</b><span class="chip chip-only">per person · golf + accommodations only</span></div>
+          <a class="go" href="#st-george">Full itinerary, costs and FAQs →</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="pics"><img src="img/sz-house-pool.jpg" alt="Scottsdale rental house pool and hot tub"><img src="img/sz-aerial.jpg" alt="Aerial view of the Scottsdale Waterfront at night" loading="lazy"><img src="img/sz-troon.jpg" alt="Troon North golf course" loading="lazy"></div>
+        <div class="body">
+          <span class="rank">OPTION 2 · FLY INTO PHOENIX</span>
+          <h3>Scottsdale</h3>
+          <p>Three nights in a desert house with a heated pool, hot tub, pool table and ping pong. Two rounds at desert courses, and a night out at Old Town's bars.</p>
+          <div class="price-line"><b>~$1,250–1,800</b><span class="chip chip-only">per person · golf + accommodations only</span></div>
+          <a class="go" href="#scottsdale">Full itinerary, costs and FAQs →</a>
+        </div>
+      </article>
+      <article class="card">
+        <div class="pics"><img src="img/pb-7.jpg" alt="Pebble Beach 7th hole over the Pacific"><img src="img/pb-patio.jpg" alt="Fire pits on the patio at the Inn at Spanish Bay" loading="lazy"><img src="img/pb-18.jpg" alt="Pebble Beach 18th hole" loading="lazy"></div>
+        <div class="body">
+          <span class="rank">OPTION 3 · FLY INTO SFO OR SJC</span>
+          <h3>Pebble Beach</h3>
+          <p>The easiest one to plan: a single Golfbreaks package with 2 nights at the Inn at Spanish Bay and guaranteed tee times at Pebble Beach and Spyglass Hill. There's no rental house; the resort is our home base.</p>
+          <div class="price-line"><b>$2,699</b><span class="chip chip-only">per person · golf + accommodations only</span></div>
+          <a class="go" href="#pebble-beach">Full itinerary, costs and FAQs →</a>
+        </div>
+      </article>
+    </div>
+    <div class="incl">
+      <div class="in"><b>Included in the prices</b>Lodging with taxes and fees, and green fees at morning or early-afternoon rates (no twilight). Shared costs are split six ways.</div>
+      <div class="out"><b>Not included</b>Flights, rental cars, food and drinks, shows or concerts, caddie and forecaddie tips, and anything else outside golf and accommodations.</div>
+      <div class="out"><b>Nothing is booked</b>The houses, hotels and itineraries are examples of what each trip could look like, with estimated prices.</div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="survey">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Members' survey</span>
+      <h2>Cast your vote</h2>
+      <p>About two minutes. Everyone sees only the totals. To change your answers, submit again with the same name.</p>
+    </div>
+    <div class="lock" id="lockNote" hidden></div>
+    <form class="survey" id="surveyForm" novalidate>
+      <div class="q">
+        <label class="qt" for="golfer">Who are you?</label>
+        <select id="golfer" name="golfer" required><option value="">Choose your name</option></select>
+      </div>
+      <fieldset class="q">
+        <legend>Which weekends work for you?</legend>
+        <p class="hint">Thursday to Sunday. Apr 8–11 and Mother's Day weekend are already off the table.</p>
+        <div class="rows" id="wkRows"></div>
+      </fieldset>
+      <fieldset class="q">
+        <legend>Rate each destination</legend>
+        <div class="rows rate-rows" id="rateRows"></div>
+      </fieldset>
+      <fieldset class="q">
+        <legend>If you had to pick one today</legend>
+        <div class="choices" id="topChoices"></div>
+      </fieldset>
+      <div class="q">
+        <label class="qt" for="notes">Anything else?</label>
+        <textarea id="notes" name="notes" rows="3" maxlength="1000" placeholder="Conflicts, flight constraints, must-plays..."></textarea>
+      </div>
+      <div class="save-bar">
+        <button class="btn btn-primary" type="submit" id="saveBtn">Save my answers</button>
+        <span class="status" id="saveStatus" role="status"></span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<section class="block" id="results">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="eyebrow">Live results</span>
+      <h2>The leaderboard</h2>
+      <p id="resultsLede">Totals only, updated as answers come in.</p>
+    </div>
+    <div class="results">
+      <div>
+        <div class="sub">Availability</div>
+        <div class="score-wrap"><table class="scorecard" id="scorecard"></table></div>
+        <p class="cap" id="bestNote"></p>
+      </div>
+      <div class="r-grid">
+        <div class="panel"><h3>Destinations</h3><div id="destResults"></div><div class="legend"><span style="--c:var(--yes)">Obsessed</span><span style="--c:var(--maybe)">Would be down</span><span style="--c:var(--no)">Not interested</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ ST. GEORGE ============ -->
+<main class="detail" id="view-st-george" hidden>
+  <div class="wrap">
+    <a class="back" href="#options">← All options</a>
+    <div class="d-head">
+      <div>
+        <span class="eyebrow">Option 1 · Fly in and out of Las Vegas</span>
+        <h2>St. George + Vegas</h2>
+        <p>Land in Vegas and spend one night there. Then drive two hours to a big rental at Sand Hollow Resort for two nights and two rounds.</p>
+      </div>
+      <div class="price-tag"><b>~$1,000–1,500</b><span>per person · golf + accommodations only</span></div>
+    </div>
+    <img class="hero-img" src="img/sg-sandhollow10.jpg" alt="Sand Hollow Championship course with red rock cliffs">
+
+    <div class="d-sec">
+      <h2>Potential itinerary*</h2>
+      <div class="days">
+        <div class="day"><b>THU</b><h4>Vegas night</h4><p>Fly into LAS. Check into the hotel, then a concert, a show or a casino night.</p></div>
+        <div class="day"><b>FRI</b><h4>Round 1 on the drive</h4><p>Wolf Creek is right on I-15 in Mesquite. Black Desert is just past St. George. Check into the penthouse after.</p></div>
+        <div class="day"><b>SAT</b><h4>Round 2</h4><p>Sand Hollow is a few minutes from the house. Afternoon at the resort pools and on the rooftop deck.</p></div>
+        <div class="day"><b>SUN</b><h4>Back to LAS</h4><p>About two hours to the airport for afternoon flights.</p></div>
+      </div>
+      <p class="foot">*Draft. Vegas can also go last: two nights at the house first, then Saturday night in Vegas and fly out Sunday.</p>
+    </div>
+
+    <div class="d-sec">
+      <h2>The golf: pick two of three</h2>
+      <p class="lead">All three are morning or early-afternoon rack rates from the courses' 2026 rate sheets. 2027 rates aren't out yet.</p>
+      <div class="courses">
+        <div class="course"><img src="img/sg-blackdesert.jpg" alt="Black Desert course through black lava rock" loading="lazy"><div class="body"><div class="meta"><h3>Black Desert</h3><span class="fee">$450</span></div><p>Tom Weiskopf's final design, through black lava fields in Ivins. It hosts PGA Tour and LPGA events. The price includes cart, forecaddie, and food and soft drinks.</p></div></div>
+        <div class="course"><img src="img/sg-sandhollow.jpg" alt="Sand Hollow Championship on red rock" loading="lazy"><div class="body"><div class="meta"><h3>Sand Hollow Championship</h3><span class="fee">~$185–230</span></div><p>Red-rock cliff holes on the back nine, a few minutes from the house. Resort lodging guests get 20% off green fees.</p></div></div>
+        <div class="course"><img src="img/sg-wolfcreek.jpg" alt="Wolf Creek fairways through desert canyons" loading="lazy"><div class="body"><div class="meta"><h3>Wolf Creek</h3><span class="fee">$360–420</span></div><p>A roller coaster of elevated tees and canyon carries in Mesquite, right on the drive from Vegas.</p></div></div>
+      </div>
+    </div>
+
+    <div class="d-sec">
+      <h2>Home base (example)</h2>
+      <div class="stay">
+        <div class="gallery"><img src="img/sg-ph-living.jpg" alt="Penthouse living room with views" loading="lazy"><img src="img/sg-ph-view.jpg" alt="Balcony view over the fairway" loading="lazy"><img src="img/sg-ph-bed.jpg" alt="Penthouse bedroom with two queen beds" loading="lazy"></div>
+        <div class="facts-list">
+          <h3>The Penthouse, Sand Hollow Resort</h3>
+          <div><span>Bedrooms</span><span>6 (everyone gets one)</span></div>
+          <div><span>Beds</span><span>2 kings, 6 queens, 2 twins</span></div>
+          <div><span>Bathrooms</span><span>6.5</span></div>
+          <div><span>Sleeps</span><span>18</span></div>
+          <div><span>Extras</span><span>Rooftop deck, balcony grill, resort pools and hot tubs</span></div>
+          <div><span>Rate seen</span><span>$654/night in May</span></div>
+          <p class="foot">Example listing, not booked. Rate is before taxes and fees. Vegas night estimated at $200–300 per person.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-sec">
+      <h2>Costs, per person</h2>
+      <p class="only"><b>Golf + accommodations only.</b> Flights, rental cars, food, show tickets and the Black Desert forecaddie tip are extra.</p>
+      <div class="cost">
+        <div>
+          <div class="sub">Pick the two rounds</div>
+          <div class="picker" data-calc="stg">
+            <label class="pick"><input type="checkbox" id="stg-bd" data-lo="450" data-hi="450" checked><span>Black Desert</span><span class="fee">$450</span></label>
+            <label class="pick"><input type="checkbox" id="stg-sh" data-lo="148" data-hi="184" checked><span>Sand Hollow (20% resort discount)</span><span class="fee">$148–184</span></label>
+            <label class="pick"><input type="checkbox" id="stg-wc" data-lo="360" data-hi="420"><span>Wolf Creek</span><span class="fee">$360–420</span></label>
+          </div>
+        </div>
+        <table class="ledger" id="ledger-stg"><tbody></tbody></table>
+      </div>
+    </div>
+
+    <div class="d-sec">
+      <h2>Off the course</h2>
+      <div class="acts">
+        <div class="act"><img src="img/sg-strip.jpg" alt="Las Vegas at night" loading="lazy"><span>Vegas: a concert, a show or a casino night</span></div>
+        <div class="act"><img src="img/sg-ph-view.jpg" alt="Penthouse balcony overlooking the course" loading="lazy"><span>Balcony views over the fairway, plus a rooftop deck</span></div>
+      </div>
+    </div>
+
+    <div class="d-sec">
+      <h2>FAQs</h2>
+      <div class="faq">
+        <details><summary>How far is St. George from Vegas?</summary><p>About 120 miles, or roughly 2 hours on I-15. Utah is one hour ahead of Nevada, so plan Sunday flights with that in mind.</p></details>
+        <details><summary>Why fly into Vegas instead of St. George?</summary><p>LAS has nonstops from NYC, Boston, Cleveland, Denver and Seattle at good prices. St. George's airport is small, with few direct flights. Flying into Vegas also gives us the Vegas night.</p></details>
+        <details><summary>What would we do in Vegas?</summary><p>Whatever the group wants: a concert, a residency or show, or just a casino night. We'll choose once the weekend is set and we can see what's playing.</p></details>
+        <details><summary>Which courses would we play?</summary><p>Two of the three: Black Desert, Sand Hollow and Wolf Creek. Wolf Creek or Black Desert fits on the drive in, and Sand Hollow is a few minutes from the house. Use the cost picker above to compare combinations.</p></details>
+        <details><summary>Why is Black Desert $450?</summary><p>That's its 2026 non-resort-guest rate from March 13 to July 6. It includes cart, a forecaddie, and food and soft drinks during the round. A forecaddie tip is customary and isn't in the estimate.</p></details>
+        <details><summary>Does everyone get their own room?</summary><p>Yes. The Penthouse has 6 bedrooms: two with a king, three with two queens each, and one with two twins.</p></details>
+        <details><summary>What's the weather like?</summary><p>Spring is prime season, with highs mostly in the 70s and 80s. By mid-May it can reach the 90s, so morning tee times are best.</p></details>
+        <details><summary>Do we need cars?</summary><p>Yes. Two rental cars, or one large SUV with room for six sets of clubs, from LAS. This isn't included in the estimate.</p></details>
+      </div>
+    </div>
+
+    <div class="d-sec"><h2>Talk it over</h2><div class="talk" data-dest="stg"></div></div>
+    <div class="d-cta"><p>Seen enough? Rate this option in the survey.</p><a class="btn btn-gold" href="#survey">Take the survey</a></div>
+  </div>
+</main>
+
+<!-- ============ SCOTTSDALE ============ -->
+<main class="detail" id="view-scottsdale" hidden>
+  <div class="wrap">
+    <a class="back" href="#options">← All options</a>
+    <div class="d-head">
+      <div>
+        <span class="eyebrow">Option 2 · Fly into Phoenix</span>
+        <h2>Scottsdale</h2>
+        <p>Three nights in a desert house with a heated pool and hot tub, two desert rounds, and Old Town's bars for a big night out.</p>
+      </div>
+      <div class="price-tag"><b>~$1,250–1,800</b><span>per person · golf + accommodations only</span></div>
+    </div>
+    <img class="hero-img" src="img/sz-troon.jpg" alt="Troon North in the Sonoran desert">
+
+    <div class="d-sec">
+      <h2>Potential itinerary*</h2>
+      <div class="days">
+        <div class="day"><b>THU</b><h4>Land in Phoenix</h4><p>About 45 minutes to the house. Groceries, the pool, and grilling at home.</p></div>
+        <div class="day"><b>FRI</b><h4>Round 1</h4><p>Morning round, afternoon at the pool, dinner in Old Town.</p></div>
+        <div class="day"><b>SAT</b><h4>Round 2</h4><p>Second round, then a big Old Town night.</p></div>
+        <div class="day"><b>SUN</b><h4>Fly home</h4><p>Brunch and out of PHX.</p></div>
+      </div>
+      <p class="foot">*Draft. In March, a spring training game can replace an afternoon at the pool.</p>
+    </div>
+
+    <div class="d-sec">
+      <h2>The golf: pick two</h2>
+      <p class="lead">Morning or early-afternoon rates. TPC is dynamically priced and costs the most. We-Ko-Pa publishes fixed 2027 rates.</p>
+      <div class="courses">
+        <div class="course"><img src="img/sz-wekopa.jpg" alt="We-Ko-Pa clubhouse patio" loading="lazy"><div class="body"><div class="meta"><h3>We-Ko-Pa Saguaro or Cholla</h3><span class="fee">$239–329 each</span></div><p>Two desert courses with no houses lining the fairways. 2027 rates: $329 through Apr 25, $239 from Apr 26 to May 16, for either course.</p></div></div>
+        <div class="course"><img src="img/sz-troon.jpg" alt="Troon North boulders and desert" loading="lazy"><div class="body"><div class="meta"><h3>Troon North</h3><span class="fee">~$300–390</span></div><p>The classic North Scottsdale boulder course, about 10 minutes from the house.</p></div></div>
+        <div class="course"><img src="img/sz-tpc16.jpg" alt="TPC Scottsdale Stadium 16th hole" loading="lazy"><div class="body"><div class="meta"><h3>TPC Scottsdale Stadium</h3><span class="fee">$436–550</span></div><p>Home of the Phoenix Open's 16th hole. Spring 2026 ran $436–550 depending on tee time, and it drops to about $300–320 in May.</p></div></div>
+      </div>
+    </div>
+
+    <div class="d-sec">
+      <h2>Home base (example)</h2>
+      <div class="stay">
+        <div class="gallery"><img src="img/sz-house-pool.jpg" alt="Heated pool and hot tub" loading="lazy"><img src="img/sz-house-living.jpg" alt="Open living room and kitchen" loading="lazy"><img src="img/sz-house-patio.jpg" alt="Covered patio with dining table" loading="lazy"></div>
+        <div class="facts-list">
+          <h3>The Vacation Spot, North Scottsdale (Vrbo)</h3>
+          <div><span>Bedrooms</span><span>5</span></div>
+          <div><span>Beds</span><span>12 (a bed each, easily)</span></div>
+          <div><span>Sleeps</span><span>16</span></div>
+          <div><span>Size</span><span>3,554 sq ft</span></div>
+          <div><span>Extras</span><span>Heated pool, hot tub, pool table, ping pong</span></div>
+          <div><span>Drive times</span><span>Troon North 10 min · PHX 45 min</span></div>
+          <p class="foot">Example listing, not booked. Estimate assumes about $1,400/night plus taxes and fees for Apr 29–May 2.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-sec">
+      <h2>Costs, per person</h2>
+      <p class="only"><b>Golf + accommodations only.</b> Flights, rental cars, food and drinks, and activities are extra.</p>
+      <div class="cost">
+        <div>
+          <div class="sub">Pick the two rounds</div>
+          <div class="picker" data-calc="scot">
+            <label class="pick"><input type="checkbox" id="scot-ws" data-lo="239" data-hi="329" checked><span>We-Ko-Pa Saguaro</span><span class="fee">$239–329</span></label>
+            <label class="pick"><input type="checkbox" id="scot-wc" data-lo="239" data-hi="329"><span>We-Ko-Pa Cholla</span><span class="fee">$239–329</span></label>
+            <label class="pick"><input type="checkbox" id="scot-tn" data-lo="300" data-hi="390" checked><span>Troon North</span><span class="fee">~$300–390</span></label>
+            <label class="pick"><input type="checkbox" id="scot-tpc" data-lo="436" data-hi="550"><span>TPC Scottsdale Stadium</span><span class="fee">$436–550</span></label>
+          </div>
+        </div>
+        <table class="ledger" id="ledger-scot"><tbody></tbody></table>
+      </div>
+    </div>
+
+    <div class="d-sec">
+      <h2>Off the course</h2>
+      <div class="acts">
+        <div class="act"><img src="img/sz-aerial.jpg" alt="Aerial view of the Scottsdale Waterfront and Old Town at night" loading="lazy"><span>Old Town Scottsdale bars and restaurants</span></div>
+        <div class="act"><img src="img/sz-house-patio.jpg" alt="Covered patio at the house" loading="lazy"><span>Pool, hot tub and ping pong at the house</span></div>
+      </div>
+    </div>
+
+    <div class="d-sec">
+      <h2>FAQs</h2>
+      <div class="faq">
+        <details><summary>Why is TPC Scottsdale so expensive?</summary><p>Dynamic pricing at its peak. In the weeks after the Phoenix Open, morning times reached $550 and the lowest rate was $436 (2026). Prices fall in May. It's optional; We-Ko-Pa and Troon North are better value.</p></details>
+        <details><summary>What do Saguaro and Cholla cost?</summary><p>The same for either course: $329 from Feb 15 to Apr 25, 2027 and $239 from Apr 26 to May 16, 2027, plus tax. We-Ko-Pa doesn't use dynamic pricing, so these won't jump the way TPC does.</p></details>
+        <details><summary>Does everyone get their own room?</summary><p>Not quite. The house has 5 bedrooms and 12 beds, so everyone gets a bed and one room is shared.</p></details>
+        <details><summary>How far is Old Town?</summary><p>About 30 minutes from the house by rideshare. Most nights we'd be at the house, with one Old Town night.</p></details>
+        <details><summary>Is spring training happening?</summary><p>Cactus League games usually run through late March, so a game is only an option on the March weekends.</p></details>
+        <details><summary>What's the weather like?</summary><p>March and April are ideal, with highs in the 70s and 80s. By mid-May afternoons reach the 90s.</p></details>
+        <details><summary>Do we need cars?</summary><p>One large SUV or two cars from PHX for golf and groceries. Rideshare for Old Town. Not included in the estimate.</p></details>
+      </div>
+    </div>
+
+    <div class="d-sec"><h2>Talk it over</h2><div class="talk" data-dest="scot"></div></div>
+    <div class="d-cta"><p>Seen enough? Rate this option in the survey.</p><a class="btn btn-gold" href="#survey">Take the survey</a></div>
+  </div>
+</main>
+
+<!-- ============ PEBBLE ============ -->
+<main class="detail" id="view-pebble-beach" hidden>
+  <div class="wrap">
+    <a class="back" href="#options">← All options</a>
+    <div class="d-head">
+      <div>
+        <span class="eyebrow">Option 3 · Fly into SFO or SJC</span>
+        <h2>Pebble Beach</h2>
+        <p>One Golfbreaks package covers it: 2 nights at the Inn at Spanish Bay, plus guaranteed rounds at Pebble Beach and Spyglass Hill. Taxes and resort fees are included.</p>
+      </div>
+      <div class="price-tag"><b>$2,699</b><span>per person · golf + accommodations only</span></div>
+    </div>
+    <img class="hero-img" src="img/pb-7.jpg" alt="Pebble Beach 7th hole over the Pacific">
+
+    <div class="d-sec">
+      <h2>Potential itinerary*</h2>
+      <div class="days">
+        <div class="day"><b>THU</b><h4>Optional early night</h4><p>Fly into SFO and drive down. Night in Monterey, not part of the package.</p></div>
+        <div class="day"><b>FRI</b><h4>Check in at Spanish Bay</h4><p>17-Mile Drive, then an afternoon or dinner with Kate and Mike Harrington, who live nearby.</p></div>
+        <div class="day"><b>SAT</b><h4>Pebble Beach</h4><p>The big one. Drinks overlooking the 18th, then fire pits and the sunset bagpiper.</p></div>
+        <div class="day"><b>SUN</b><h4>Spyglass, then home</h4><p>Morning round, then evening flights out of SFO or SJC.</p></div>
+      </div>
+      <p class="foot">*Draft. Golfbreaks sets the exact tee times when we book.</p>
+    </div>
+
+    <div class="d-sec">
+      <h2>The golf: both included</h2>
+      <div class="courses">
+        <div class="course"><img src="img/pb-18.jpg" alt="Pebble Beach 18th hole along Carmel Bay" loading="lazy"><div class="body"><div class="meta"><h3>Pebble Beach Golf Links</h3><span class="chip req">Included</span></div><p>Six U.S. Opens, the 7th hole over the Pacific, and the 18th along Carmel Bay.</p></div></div>
+        <div class="course"><img src="img/pb-spy1.jpg" alt="Spyglass Hill first hole toward the ocean" loading="lazy"><div class="body"><div class="meta"><h3>Spyglass Hill</h3><span class="chip req">Included</span></div><p>The first five holes run through the dunes, then it climbs into the Del Monte Forest. It's among the toughest courses in the country.</p></div></div>
+        <div class="course"><img src="img/pb-inn.jpg" alt="The Inn at Spanish Bay and the Links" loading="lazy"><div class="body"><div class="meta"><h3>The Links at Spanish Bay</h3><span class="chip opt">Optional add-on</span></div><p>Links-style course right outside the Inn. Could be added as a third round if we come in Thursday.</p></div></div>
+      </div>
+    </div>
+
+    <div class="d-sec">
+      <h2>Home base (example)</h2>
+      <div class="stay">
+        <div class="gallery"><img src="img/pb-patio.jpg" alt="Fire pits on the patio at the Inn at Spanish Bay" loading="lazy"><img src="img/pb-inn.jpg" alt="The Inn at Spanish Bay" loading="lazy"><img src="img/pb-room.jpg" alt="Guest room at the Inn at Spanish Bay" loading="lazy"></div>
+        <div class="facts-list">
+          <h3>The Inn at Spanish Bay</h3>
+          <div><span>Nights</span><span>2, room only</span></div>
+          <div><span>Rooms</span><span>Two per room, two queen beds</span></div>
+          <div><span>For six</span><span>3 rooms</span></div>
+          <div><span>Hangout</span><span>Lobby lounge, patio fire pits</span></div>
+          <div><span>Booked through</span><span>Golfbreaks</span></div>
+          <p class="foot">No shared house: the resort stay is what guarantees the Pebble tee times. Rooms are booked as part of the package.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-sec">
+      <h2>Costs, per person</h2>
+      <p class="only"><b>Golf + accommodations only.</b> Flights, rental cars, food and drinks, caddie fees and tips are extra.</p>
+      <div class="cost">
+        <table class="ledger">
+          <tbody>
+            <tr><td>2 nights, Inn at Spanish Bay<small>Two people per room</small></td><td>incl.</td></tr>
+            <tr><td>Pebble Beach Golf Links</td><td>incl.</td></tr>
+            <tr><td>Spyglass Hill</td><td>incl.</td></tr>
+            <tr><td>All taxes and resort fees</td><td>incl.</td></tr>
+            <tr class="total"><td>Golfbreaks package</td><td>$2,699</td></tr>
+          </tbody>
+        </table>
+        <div class="facts-list">
+          <div><span>Lowest listed price</span><span>from $2,139 (select dates)</span></div>
+          <div><span>Optional Thursday night in Monterey</span><span>+$100–200</span></div>
+          <p class="foot">Package prices change by date. $2,699 is the price for the dates we checked.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="d-sec">
+      <h2>Off the course</h2>
+      <div class="acts">
+        <div class="act"><img src="img/pb-patio.jpg" alt="Spanish Bay patio fire pits at sunset" loading="lazy"><span>Fire pits on the Spanish Bay patio</span></div>
+        <div class="act"><img src="img/pb-piper.jpg" alt="Bagpiper at sunset at Spanish Bay" loading="lazy"><span>The sunset bagpiper</span></div>
+        <div class="act"><img src="img/pb-cypress.jpg" alt="Lone Cypress on 17-Mile Drive" loading="lazy"><span>17-Mile Drive</span></div>
+      </div>
+      <p class="only"><b>Visit Kate and Mike Harrington.</b> They live nearby, so we could spend an afternoon or have dinner with them.</p>
+    </div>
+
+    <div class="d-sec">
+      <h2>FAQs</h2>
+      <div class="faq">
+        <details><summary>What exactly is in the $2,699?</summary><p>2 nights room only at the Inn at Spanish Bay, one round at Pebble Beach Golf Links and one at Spyglass Hill, plus all taxes and resort fees. The price is per person with two sharing a room.</p></details>
+        <details><summary>Why book through Golfbreaks?</summary><p>Tee times at Pebble are only guaranteed with a resort stay. The package locks in both rounds and the rooms together, so it's the simplest option to plan.</p></details>
+        <details><summary>Will the price change?</summary><p>Yes, by date. Golfbreaks lists this package from $2,139 on some dates. We'd confirm the price once we pick a weekend.</p></details>
+        <details><summary>Does everyone get a bed?</summary><p>Yes. We'd book three rooms with two queen beds each. Golfbreaks calls these "twin" rooms, which just means two beds.</p></details>
+        <details><summary>What isn't included?</summary><p>Flights, a rental car, meals and drinks, and caddie or forecaddie fees and tips. Expect to pay a caddie or forecaddie at Pebble on top of the package.</p></details>
+        <details><summary>Which airport?</summary><p>SFO has the most nonstops from our home cities and is about 2 hours away. SJC is about 75 minutes but has fewer flights. Monterey (MRY) is closest but has very few flights.</p></details>
+      </div>
+    </div>
+
+    <div class="d-sec"><h2>Talk it over</h2><div class="talk" data-dest="peb"></div></div>
+    <div class="d-cta"><p>Seen enough? Rate this option in the survey.</p><a class="btn btn-gold" href="#survey">Take the survey</a></div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>Kenly Golf Club · Spring 2027. Green fees are 2026 published rates unless marked 2027, and lodging is from listings checked in November 2026. All prices will change with 2027 quotes.</p>
+    <details>
+      <summary>Photo credits</summary>
+      <ul>
+        <li>Black Desert: blackdesertresort.com. Sand Hollow course and the Penthouse: sandhollowresort.com. Wolf Creek: GolfPass.</li>
+        <li>Scottsdale house: Vrbo listing "The Vacation Spot". Old Town aerial: Experience Scottsdale. Troon North: troonnorthgolf.com. We-Ko-Pa: wekopa.com. TPC Scottsdale: tpc.com.</li>
+        <li>Pebble Beach, Spyglass Hill and the Inn at Spanish Bay: Golfbreaks (photography by Joann Dost and Scott Campbell).</li>
+        <li>Wikimedia Commons: "Las Vegas Strip from Resorts World February 2023 HDR 1" (CC BY-SA 4.0); "Lone Cypress 17-Mile Drive 2013" (CC BY-SA 3.0).</li>
+      </ul>
+    </details>
+  </div>
+</footer>
+
+<script>
+(function(){
+const GOLFERS=[["tyler","Tyler"],["granger","Granger"],["kyle","Kyle"],["kevin","Kevin"],["james","James"],["colin","Colin"]];
+const WEEKENDS=[["mar18","Mar 18–21",""],["mar25","Mar 25–28","Easter weekend"],["apr01","Apr 1–4",""],["apr15","Apr 15–18",""],["apr22","Apr 22–25",""],["apr29","Apr 29–May 2",""],["may13","May 13–16",""]];
+const DESTS=[["stg","St. George + Vegas"],["scot","Scottsdale"],["peb","Pebble Beach"]];
+const RATE=[["love","Obsessed"],["cool","Would be down"],["no","Not interested"]];
+const AV=[["yes","Available"],["maybe","Could make it work"],["no","Can't"]];
+const VIEWS=["st-george","scottsdale","pebble-beach"];
+const nameOf=k=>(GOLFERS.find(g=>g[0]===k)||[,"Someone"])[1];
+const $=s=>document.querySelector(s);
+const el=(t,a={},...kids)=>{const e=document.createElement(t);for(const[k,v]of Object.entries(a)){if(k==="text")e.textContent=v;else if(k==="cls")e.className=v;else e.setAttribute(k,v)}kids.forEach(c=>c&&e.append(c));return e};
+const money=n=>"$"+Math.round(n).toLocaleString("en-US");
+const range=(l,h)=>l===h?money(l):money(l)+"–"+money(h).slice(1);
+
+/* ---- routing: #st-george, #scottsdale, #pebble-beach open detail pages ---- */
+function route(){
+  const h=location.hash.slice(1);
+  const detail=VIEWS.includes(h)?h:null;
+  $("#view-home").hidden=!!detail;$("#mastHome").hidden=!!detail;
+  VIEWS.forEach(v=>{$("#view-"+v).hidden=v!==detail});
+  if(detail)window.scrollTo(0,0);
+  else if(h){const t=document.getElementById(h);if(t)requestAnimationFrame(()=>t.scrollIntoView())}
+}
+addEventListener("hashchange",route);route();
+
+/* ---- cost calculators ---- */
+const FIXED={
+  stg:[["Penthouse, 2 nights","$654/night, about $1,650–1,900 with taxes and fees, split 6 ways",275,315],["Vegas hotel, 1 night","Estimated per person for the night",200,300]],
+  scot:[["The Vacation Spot, 3 nights","About $1,400/night, roughly $4,700–5,300 with taxes and fees, split 6 ways",780,880]]
+};
+function calc(key){
+  const box=document.querySelector(`.picker[data-calc="${key}"]`),tb=$("#ledger-"+key+" tbody");if(!box||!tb)return;
+  tb.textContent="";let lo=0,hi=0,rounds=0;
+  box.querySelectorAll("input").forEach(i=>{if(!i.checked)return;const l=+i.dataset.lo,h=+i.dataset.hi;lo+=l;hi+=h;rounds++;
+    tb.append(el("tr",{},el("td",{text:i.nextElementSibling.textContent}),el("td",{text:range(l,h)})))});
+  FIXED[key].forEach(([n,s,l,h])=>{lo+=l;hi+=h;const td=el("td",{text:n});td.append(el("small",{text:s}));tb.append(el("tr",{},td,el("td",{text:range(l,h)})))});
+  const lab=el("td",{text:"Estimate, golf + accommodations"});lab.append(el("small",{text:rounds+" round"+(rounds===1?"":"s")+" selected"}));
+  tb.append(el("tr",{cls:"total"},lab,el("td",{text:"~"+range(lo,hi)})));
+}
+document.querySelectorAll(".picker").forEach(p=>{p.addEventListener("change",()=>calc(p.dataset.calc));calc(p.dataset.calc)});
+
+/* ---- build form ---- */
+const gSel=$("#golfer");GOLFERS.forEach(([k,n])=>gSel.append(el("option",{value:k,text:n})));
+function seg(name,opts){const s=el("div",{cls:"seg",role:"radiogroup"});opts.forEach(([v,l])=>{const id=name+"-"+v;s.append(el("input",{type:"radio",name,id,value:v}),el("label",{for:id,text:l}))});return s}
+WEEKENDS.forEach(([k,l,n])=>{const lbl=el("div",{cls:"lbl"},el("b",{text:l}));if(n)lbl.append(el("small",{text:n}));$("#wkRows").append(el("div",{cls:"row"},lbl,seg("wk-"+k,AV)))});
+DESTS.forEach(([k,n])=>$("#rateRows").append(el("div",{cls:"row"},el("div",{cls:"lbl"},el("b",{text:n})),seg("rt-"+k,RATE))));
+function choice(c,type,name,v,label,sub){const id=name+"-"+v;const lab=el("label",{for:id,text:label});if(sub)lab.append(el("small",{text:sub}));c.append(el("div",{cls:"choice"},el("input",{type,name,id,value:v}),lab))}
+DESTS.forEach(([k,n])=>choice($("#topChoices"),"radio","top",k,n));
+
+/* ---- comments ---- */
+document.querySelectorAll(".talk").forEach(t=>{
+  const d=t.dataset.dest;
+  t.append(el("ul",{cls:"c-list",id:"cl-"+d}));
+  const ta=el("textarea",{id:"c-"+d,rows:"2",maxlength:"800",placeholder:"Add a comment for the group","aria-label":"Comment"});
+  const nm=el("select",{id:"cn-"+d,cls:"c-name","aria-label":"Your name"},el("option",{value:"",text:"Your name"}));
+  GOLFERS.forEach(([k,n])=>nm.append(el("option",{value:k,text:n})));
+  const mine=(()=>{try{return (JSON.parse(localStorage.getItem("kgc2027-answers")||"null")||{}).golfer}catch(e){return null}})();if(mine)nm.value=mine;
+  const b=el("button",{cls:"btn btn-primary",type:"button",id:"cb-"+d,text:"Post"});
+  t.append(nm,el("div",{cls:"c-form"},ta,b),el("span",{cls:"status",id:"cs-"+d,role:"status"}));
+  b.addEventListener("click",()=>postComment(d));
+});
+
+function readForm(){
+  const f=$("#surveyForm"),v=n=>{const x=f.querySelector(`input[name="${n}"]:checked`);return x?x.value:null};
+  const weekends={},ratings={};
+  WEEKENDS.forEach(([k])=>{const x=v("wk-"+k);if(x)weekends[k]=x});
+  DESTS.forEach(([k])=>{const x=v("rt-"+k);if(x)ratings[k]=x});
+  return{golfer:gSel.value,weekends,ratings,top:v("top"),notes:$("#notes").value.trim().slice(0,1000)};
+}
+function fillForm(r){
+  if(!r)return;const f=$("#surveyForm");const pick=(n,val)=>{const x=f.querySelector(`input[name="${n}"][value="${val}"]`);if(x)x.checked=true};
+  if(r.golfer)gSel.value=r.golfer;
+  Object.entries(r.weekends||{}).forEach(([k,x])=>pick("wk-"+k,x));
+  Object.entries(r.ratings||{}).forEach(([k,x])=>pick("rt-"+k,x));
+  if(r.top)pick("top",r.top);
+  if(typeof r.notes==="string")$("#notes").value=r.notes;
+}
+
+/* ---- results ---- */
+var tallies=[];
+function render(){
+  const n=tallies.length;
+  $("#respCount").textContent=n+" of 6 members have answered";
+  const sc=$("#scorecard");sc.textContent="";
+  const cnt={};WEEKENDS.forEach(([k])=>cnt[k]={yes:0,maybe:0,no:0});
+  tallies.forEach(t=>Object.entries(t.weekends||{}).forEach(([k,v])=>{if(cnt[k]&&cnt[k][v]!=null)cnt[k][v]++}));
+  const score=k=>cnt[k].yes*2+cnt[k].maybe-cnt[k].no*3;
+  let best=-1e9;WEEKENDS.forEach(([k])=>{if(score(k)>best)best=score(k)});
+  const isBest=k=>n&&score(k)===best&&(cnt[k].yes+cnt[k].maybe)>0;
+  sc.append(el("thead",{},el("tr",{},el("th",{text:"Weekend"}),el("th",{text:"Available"}),el("th",{text:"Could make it work"}),el("th",{text:"Can't"}))));
+  const body=el("tbody");
+  WEEKENDS.forEach(([k,l])=>{const tr=el("tr",isBest(k)?{cls:"best"}:{},el("th",{text:l}),el("td",{cls:"c-yes",text:String(cnt[k].yes)}),el("td",{cls:"c-maybe",text:String(cnt[k].maybe)}),el("td",{cls:"c-no",text:String(cnt[k].no)}));body.append(tr)});
+  sc.append(body);
+  const bests=WEEKENDS.filter(([k])=>isBest(k)).map(w=>w[1]);
+  $("#bestNote").textContent=bests.length?"Highlighted: leading so far ("+bests.join(", ")+"). Any \"Can't\" counts heavily against a weekend.":"No weekend answers yet.";
+  const dr=$("#destResults");dr.textContent="";
+  if(!n)dr.append(el("p",{cls:"empty",text:"Ratings will show up here."}));
+  else DESTS.map(([k,nm])=>{const c={love:0,cool:0,no:0};tallies.forEach(t=>{const v=(t.ratings||{})[k];if(c[v]!=null)c[v]++});return{nm,c,tops:tallies.filter(t=>t.top===k).length,pts:c.love*2+c.cool}})
+    .sort((a,b)=>b.tops-a.tops||b.pts-a.pts).forEach(d=>{const tot=d.c.love+d.c.cool+d.c.no||1;
+      const st=el("div",{cls:"stack"});[["love","s-love"],["cool","s-cool"],["no","s-no"]].forEach(([k,c])=>{if(d.c[k])st.append(el("i",{cls:c,style:"width:"+(d.c[k]/tot*100)+"%"}))});
+      dr.append(el("div",{cls:"d-row"},el("span",{text:d.nm}),el("span",{cls:"pts",text:d.tops+" × #1 pick"}),st))});
+}
+render();
+
+/* ---- runtime: Google Apps Script backend ---- */
+const API_URL="https://script.google.com/macros/s/AKfycbx0Y4t21s07eNadD248Tz4QGPHRhu1F3siWByJBWxMpyRywQ2tssxSTlgqm4vyAr1Gb/exec";
+const STORE="kgc2027-answers";
+let comments=[],myGolfer=null,loading=false;
+const status=(id,msg,kind)=>{const s=$(id);s.textContent=msg;s.className="status"+(kind?" "+kind:"")};
+const saved=()=>{try{return JSON.parse(localStorage.getItem(STORE)||"null")}catch(e){return null}};
+const remember=r=>{try{localStorage.setItem(STORE,JSON.stringify(r))}catch(e){}};
+const live=()=>API_URL&&!API_URL.startsWith("__");
+function lock(msg){const l=$("#lockNote");l.textContent=msg;l.hidden=false;$("#saveBtn").disabled=true;document.querySelectorAll(".c-form button").forEach(b=>b.disabled=true)}
+async function api(body){
+  const opt=body?{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify(body)}:{};
+  const res=await fetch(API_URL+(body?"":"?t="+Date.now()),opt);
+  if(!res.ok)throw new Error("http "+res.status);
+  const j=await res.json();if(!j.ok)throw new Error(j.error||"failed");return j;
+}
+async function refresh(){
+  if(loading||!live())return;loading=true;
+  try{const j=await api();tallies=j.tallies||[];comments=j.comments||[];render();renderComments();$("#resultsLede").textContent="Totals only, updated as answers come in."}
+  catch(e){$("#resultsLede").textContent="Results couldn't load right now. They'll refresh automatically."}
+  loading=false;
+}
+function start(){
+  const mine=saved();if(mine){fillForm(mine);myGolfer=mine.golfer||null;status("#saveStatus","Your last answers from this device are filled in. Change anything and save again.")}
+  if(!live()){lock("The survey opens soon. Check back shortly.");$("#respCount").textContent="Survey opens soon";return}
+  refresh();setInterval(()=>{if(!document.hidden)refresh()},60000);
+  document.addEventListener("visibilitychange",()=>{if(!document.hidden)refresh()});
+}
+function renderComments(){
+  DESTS.forEach(([d])=>{const ul=$("#cl-"+d);if(!ul)return;ul.textContent="";
+    const list=comments.filter(c=>c.dest===d).sort((a,b)=>a.at-b.at);
+    if(!list.length)ul.append(el("li",{cls:"empty",text:"No comments yet. Start the conversation."}));
+    list.forEach(c=>ul.append(el("li",{},el("b",{text:nameOf(c.golfer)}),el("time",{text:new Date(c.at).toLocaleDateString(undefined,{month:"short",day:"numeric"})}),el("p",{text:c.text}))))})
+}
+async function postComment(d){
+  const ta=$("#c-"+d),text=ta.value.trim();if(!text)return;
+  const who=$("#cn-"+d).value;
+  if(!who){status("#cs-"+d,"Choose your name first.","err");$("#cn-"+d).focus();return}
+  if(!live()){status("#cs-"+d,"Comments open soon.","err");return}
+  const btn=$("#cb-"+d);btn.disabled=true;status("#cs-"+d,"Posting…");
+  try{await api({action:"comment",golfer:who,dest:d,text:text.slice(0,800)});ta.value="";status("#cs-"+d,"Posted.","ok");myGolfer=myGolfer||who;await refresh()}
+  catch(e){status("#cs-"+d,"Couldn't post. Check your connection and try again.","err")}
+  btn.disabled=false;
+}
+$("#surveyForm").addEventListener("submit",async e=>{
+  e.preventDefault();const r=readForm();
+  if(!r.golfer){status("#saveStatus","Choose your name first.","err");gSel.focus();return}
+  if(!Object.keys(r.weekends).length){status("#saveStatus","Answer at least one weekend.","err");return}
+  if(!live()){status("#saveStatus","The survey opens soon.","err");return}
+  const btn=$("#saveBtn");btn.disabled=true;status("#saveStatus","Saving…");
+  try{await api({action:"submit",...r});remember(r);myGolfer=r.golfer;document.querySelectorAll(".c-name").forEach(s=>{if(!s.value)s.value=r.golfer});status("#saveStatus","Saved. Submit again anytime to change your answers.","ok");refresh()}
+  catch(err){status("#saveStatus","Couldn't save. Check your connection and try again.","err")}
+  btn.disabled=false;
+});
+start();
+})();
+</script>
+</body>
+</html>
