@@ -134,6 +134,23 @@ section{padding-block:var(--space-12) 0}
 .faq details[open] summary::after{content:"–"}
 .faq details p{margin:0;padding:0 2px var(--space-4);font-size:16px;line-height:25px;color:var(--ink-muted);max-width:68ch}
 
+/* feedback */
+.fb{background:var(--ground-raised);border:1px solid var(--line);border-radius:var(--radius-sm);padding:var(--space-6) var(--space-4);display:grid;gap:var(--space-4)}
+.fb-list{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-3)}
+.fb-list li{border:1px solid var(--line);border-radius:var(--radius-sm);padding:var(--space-3) var(--space-4)}
+.fb-list b{font-weight:600}
+.fb-list time{font-size:13px;color:var(--ink-muted);margin-left:var(--space-2)}
+.fb-list p{margin:var(--space-1) 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+.fb-list li.fb-empty{border:0;padding:0;color:var(--ink-muted);font-style:italic;font-family:var(--font-serif)}
+.lbl{font-weight:600;font-size:15px}
+.fb select,.fb textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--ground);border:1px solid var(--line-strong);border-radius:var(--radius-sm);padding:10px 12px;width:100%}
+.fb textarea{resize:vertical;min-height:96px}
+.fb-field{display:grid;gap:var(--space-2)}
+.post{font:600 16px/20px var(--font-sans);min-height:48px;padding:0 var(--space-6);border-radius:var(--radius-sm);border:1px solid var(--accent);background:var(--accent);color:var(--on-accent);cursor:pointer;justify-self:start}
+.post[disabled]{opacity:.5;cursor:not-allowed}
+.status{font-size:14px;line-height:20px;color:var(--ink-muted);min-height:20px;margin:0}
+.status.ok{color:var(--booked)} .status.err{color:var(--accent)}
+@media (min-width:720px){.fb{padding:var(--space-8)}}
 footer{padding-block:var(--space-12);font-size:13px;line-height:19px;color:var(--ink-muted)}
 footer details{margin-top:var(--space-2)}
 
@@ -150,12 +167,12 @@ footer details{margin-top:var(--space-2)}
   <div class="wrap mast-inner">
     <div class="mast-top">
       <a class="club" href="./"><span class="crest"><img src="img/kgc-logo.png" alt="" width="42" height="40"></span><span class="club-name">Kenly Golf Club</span></a>
-      <nav class="nav" aria-label="Sections"><a href="#stay">Stay</a><a href="#weekend">Weekend</a><a href="#golf">Golf</a><a href="#flights">Flights</a><a href="#costs">Costs</a><a href="survey.html#results">Survey results</a></nav>
+      <nav class="nav" aria-label="Sections"><a href="#stay">Stay</a><a href="#weekend">Weekend</a><a href="#golf">Golf</a><a href="#flights">Flights</a><a href="#costs">Costs</a><a href="#feedback">Feedback</a><a href="survey.html#results">Survey results</a></nav>
     </div>
     <span class="eyebrow">Proposed itinerary · Trip No. 4</span>
     <h1 class="title">St. George + Vegas</h1>
     <p class="sub">Thursday, May 13 – Sunday, May 16, 2027 · <b id="countdown">May 13 kickoff</b></p>
-    <p class="sub">Nothing is booked yet. Review the plan and give it a thumbs up in the group text by <b>Friday, Nov 13</b>, and I'll start booking the house, tee times and Santana tickets.</p>
+    <p class="sub">Nothing is booked yet. Review the plan and give it a thumbs up in the group text by <b>Friday, Nov 13</b>, and I'll start booking the house, tee times and Santana tickets. Questions or changes go in the <a href="#feedback">feedback section</a> at the bottom.</p>
   </div>
   <hr class="rule">
 </header>
@@ -330,6 +347,20 @@ footer details{margin-top:var(--space-2)}
     </div>
   </section>
 
+  <section id="feedback">
+    <div class="sec-head">
+      <span class="eyebrow">Feedback</span>
+      <h2>Questions and call-outs</h2>
+      <p>Anything you'd change, a conflict, or a question about the plan. Post it here so it's all in one place.</p>
+    </div>
+    <div class="fb">
+      <ul class="fb-list" id="fbList"><li class="fb-empty">Comments load here.</li></ul>
+      <div class="fb-field"><label class="lbl" for="fbName">Your name</label><select id="fbName"><option value="">Choose your name</option></select></div>
+      <div class="fb-field"><label class="lbl" for="fbText">Your comment</label><textarea id="fbText" maxlength="800" placeholder="Swap a course, move dinner, flight timing..."></textarea></div>
+      <button class="post" id="fbPost" type="button">Post comment</button>
+      <p class="status" id="fbStatus" role="status"></p>
+    </div>
+  </section>
 </main>
 
 <footer>
@@ -347,6 +378,43 @@ footer details{margin-top:var(--space-2)}
   var c=document.getElementById("countdown"),start=new Date(2027,4,13),n=new Date();
   var d=Math.ceil((start-new Date(n.getFullYear(),n.getMonth(),n.getDate()))/86400000);
   c.textContent=d>1?d+" days to go":d===1?"Tomorrow":d>-4?"We're on the trip":"In the books";
+})();
+(function(){
+  var API="https://script.google.com/macros/s/AKfycbx0Y4t21s07eNadD248Tz4QGPHRhu1F3siWByJBWxMpyRywQ2tssxSTlgqm4vyAr1Gb/exec";
+  var GOLFERS=[["tyler","Tyler"],["granger","Granger"],["kyle","Kyle"],["kevin","Kevin"],["james","James"],["colin","Colin"]];
+  var nameOf=function(k){for(var i=0;i<GOLFERS.length;i++)if(GOLFERS[i][0]===k)return GOLFERS[i][1];return "Someone"};
+  var $=function(id){return document.getElementById(id)};
+  var sel=$("fbName"),ta=$("fbText"),btn=$("fbPost"),st=$("fbStatus"),list=$("fbList");
+  GOLFERS.forEach(function(g){var o=document.createElement("option");o.value=g[0];o.textContent=g[1];sel.appendChild(o)});
+  try{var saved=localStorage.getItem("kgc2027-voter")||(JSON.parse(localStorage.getItem("kgc2027-answers")||"null")||{}).golfer;if(saved)sel.value=saved}catch(e){}
+  function status(m,k){st.textContent=m;st.className="status"+(k?" "+k:"")}
+  function empty(m){list.textContent="";var e=document.createElement("li");e.className="fb-empty";e.textContent=m;list.appendChild(e)}
+  function render(items){
+    if(!items.length){empty("No comments yet. Be the first.");return}
+    list.textContent="";
+    items.sort(function(a,b){return a.at-b.at}).forEach(function(c){
+      var li=document.createElement("li"),b=document.createElement("b"),t=document.createElement("time"),p=document.createElement("p");
+      b.textContent=nameOf(c.golfer);t.textContent=new Date(c.at).toLocaleDateString(undefined,{month:"short",day:"numeric"});p.textContent=c.text;
+      li.appendChild(b);li.appendChild(t);li.appendChild(p);list.appendChild(li)});
+  }
+  function load(){
+    fetch(API+"?t="+Date.now()).then(function(r){return r.json()}).then(function(j){
+      if(!j.ok)throw 0;render((j.comments||[]).filter(function(c){return c.dest==="stg"}));
+    }).catch(function(){empty("Comments couldn't load right now. Try again in a minute.")});
+  }
+  btn.addEventListener("click",function(){
+    var who=sel.value,text=ta.value.trim();
+    if(!who){status("Choose your name first.","err");sel.focus();return}
+    if(!text){status("Write a comment first.","err");ta.focus();return}
+    btn.disabled=true;status("Posting…");
+    fetch(API,{method:"POST",headers:{"Content-Type":"text/plain;charset=utf-8"},body:JSON.stringify({action:"comment",golfer:who,dest:"stg",text:text.slice(0,800)})})
+      .then(function(r){return r.json()}).then(function(j){if(!j.ok)throw 0;
+        try{localStorage.setItem("kgc2027-voter",who)}catch(e){}
+        ta.value="";status("Posted. Thanks.","ok");load()})
+      .catch(function(){status("Couldn't post. Check your connection and try again.","err")})
+      .then(function(){btn.disabled=false});
+  });
+  load();setInterval(function(){if(!document.hidden)load()},60000);
 })();
 </script>
 </body>
