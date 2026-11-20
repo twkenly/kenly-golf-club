@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="robots" content="noindex,nofollow">
-<meta name="description" content="Kenly Golf Club 2027: the proposed St. George + Vegas itinerary for May 13–16. Wolf Creek, Sand Hollow and the house are booked.">
+<meta name="description" content="Kenly Golf Club 2027: St. George + Vegas, May 13–16. Tee times and the house are booked, but fully refundable.">
 <meta property="og:title" content="KGC 2027 · St. George + Vegas">
-<meta property="og:description" content="Itinerary for May 13–16, 2027. Wolf Creek, Sand Hollow and the house are booked.">
+<meta property="og:description" content="May 13–16, 2027. Tee times and the house are booked, but fully refundable.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://twkenly.github.io/kenly-golf-club/">
 <meta property="og:image" content="https://twkenly.github.io/kenly-golf-club/img/kgc-share.jpg">
@@ -74,7 +74,10 @@ h1,h2,h3{font-family:var(--font-serif);font-weight:400;margin:0;text-wrap:balanc
 /* visual summary */
 .summary{margin-top:var(--space-8);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:var(--space-3)}
 .tile{margin:0;display:grid;gap:var(--space-2)}
-.tile img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-sm)}
+.tile img,.tile video{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:var(--radius-sm);display:block;background:var(--ground-raised)}
+.tile.wide{grid-column:1/-1}
+.tile.wide img{aspect-ratio:2/1}
+.tile b a{color:var(--ink);text-decoration-color:var(--line-strong);text-underline-offset:3px}
 .tile figcaption{display:grid;gap:2px}
 .tile b{font-family:var(--font-serif);font-weight:400;font-size:18px;line-height:24px}
 .tile span{font-size:13px;line-height:18px;color:var(--ink-muted)}
@@ -89,7 +92,7 @@ section{padding-block:var(--space-12) 0}
 .house-gallery img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:var(--radius-sm)}
 .card-body p a{white-space:nowrap}
 .card{background:var(--ground-raised);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden}
-.card>img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.card>img,.card>video{width:100%;aspect-ratio:3/2;object-fit:cover;display:block;background:var(--ground)}
 .card-body{padding:var(--space-4);display:grid;gap:var(--space-2)}
 .card-body h3{font-size:21px;line-height:1.25}
 .card-body p{margin:0;font-size:15px;line-height:22px;color:var(--ink-muted)}
@@ -158,7 +161,9 @@ footer{padding-block:var(--space-12);font-size:13px;line-height:19px;color:var(-
 footer details{margin-top:var(--space-2)}
 
 @media (min-width:720px){
-  .summary{grid-template-columns:repeat(4,minmax(0,1fr))}
+  .summary{grid-template-columns:repeat(5,minmax(0,1fr))}
+  .tile.wide{grid-column:auto}
+  .tile.wide img{aspect-ratio:4/3}
   .grid2{grid-template-columns:repeat(2,minmax(0,1fr))}
   .house-gallery{grid-template-columns:repeat(4,minmax(0,1fr))}
   section{padding-block:var(--space-16) 0}
@@ -176,17 +181,18 @@ footer details{margin-top:var(--space-2)}
     <span class="eyebrow">Proposed itinerary · Trip No. 4</span>
     <h1 class="title">St. George + Vegas</h1>
     <p class="sub">Thursday, May 13 – Sunday, May 16, 2027 · <b id="countdown">May 13 kickoff</b></p>
-    <p class="sub">Wolf Creek, Sand Hollow and the house are booked. Questions or changes go in the <a href="#feedback">feedback section</a> at the bottom.</p>
+    <p class="sub">Tee times and the house are booked, but fully refundable.</p>
   </div>
   <hr class="rule">
 </header>
 
 <main class="wrap">
   <div class="summary" aria-label="Trip highlights">
-    <figure class="tile"><img src="img/sg-strip.jpg" alt="Las Vegas at night" width="1400" height="933"><figcaption><b>Las Vegas</b><span>Thursday night</span></figcaption></figure>
-    <figure class="tile"><img src="img/santana.jpg" alt="Carlos Santana playing guitar on stage" width="640" height="427"><figcaption><b>Santana</b><span>Thursday, House of Blues</span></figcaption></figure>
-    <figure class="tile"><img src="img/sg-sandhollow10.jpg" alt="Sand Hollow Championship course on red rock cliffs" width="1400" height="788"><figcaption><b>Sand Hollow</b><span>Saturday round</span></figcaption></figure>
-    <figure class="tile"><img src="img/zp-hottub.jpg" alt="Hot tub on the upstairs deck at sunset, Zephyr House" width="1400" height="935"><figcaption><b>Zephyr House</b><span>Our house, Friday and Saturday</span></figcaption></figure>
+    <figure class="tile wide"><img src="img/sg-strip.jpg" alt="Las Vegas at night" width="1400" height="933"><figcaption><b>Las Vegas</b><span>Thursday night</span></figcaption></figure>
+    <figure class="tile"><video class="vid" src="vid/wolfcreek.mp4" poster="vid/wolfcreek.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Aerial video of Wolf Creek Golf Club"></video><figcaption><b><a href="https://www.golfwolfcreek.com/" target="_blank" rel="noopener">Wolf Creek</a></b><span>Friday · booked</span></figcaption></figure>
+    <figure class="tile"><video class="vid" src="vid/sandhollow.mp4" poster="vid/sandhollow.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Aerial video of Sand Hollow"></video><figcaption><b><a href="https://sandhollowresort.com/" target="_blank" rel="noopener">Sand Hollow</a></b><span>Saturday · booked</span></figcaption></figure>
+    <figure class="tile"><video class="vid" src="vid/blackdesert.mp4" poster="vid/blackdesert.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Aerial video of Black Desert"></video><figcaption><b><a href="https://www.blackdesertresort.com/golf" target="_blank" rel="noopener">Black Desert</a></b><span>Possible Saturday switch</span></figcaption></figure>
+    <figure class="tile"><img src="img/zp-hottub.jpg" alt="Hot tub on the upstairs deck at sunset, Zephyr House" width="1400" height="935"><figcaption><b><a href="https://www.airbnb.com/rooms/1720516961793957325" target="_blank" rel="noopener">Zephyr House</a></b><span>Fri–Sat · booked</span></figcaption></figure>
   </div>
 
   <section id="stay">
@@ -225,8 +231,8 @@ footer details{margin-top:var(--space-2)}
         <div class="day-body">
           <h3 class="day-title">Vegas night</h3>
           <ul class="day-list">
-            <li><span class="time">Day</span><span>Land at LAS. Optional round for anyone who wants to get in early.</span></li>
-            <li><span class="time">7:00 PM</span><span><a href="https://santana.com/" target="_blank" rel="noopener">Santana</a> at House of Blues, Mandalay Bay</span></li>
+            <li><span class="time">Day</span><span>Fly into LAS whenever works</span></li>
+            <li><span class="time">Evening</span><span>Dinner, and <a href="https://santana.com/" target="_blank" rel="noopener">Santana</a> at House of Blues if we want to do it <span class="note">· 7 PM show, not booked</span></span></li>
           </ul>
         </div>
       </article>
@@ -276,26 +282,34 @@ footer details{margin-top:var(--space-2)}
     <div class="sec-head">
       <span class="eyebrow">Golf</span>
       <h2>Two rounds</h2>
-      <p>One on the drive out and one on Saturday afternoon. Both are booked.</p>
+      <p>One on the drive out and one on Saturday afternoon. Both are booked, with Black Desert as a possible Saturday switch.</p>
     </div>
     <div class="grid2">
       <article class="card">
-        <img src="img/sg-wolfcreek.jpg" alt="Wolf Creek fairways through desert canyons" width="720" height="478" loading="lazy">
+        <video class="vid" src="vid/wolfcreek.mp4" poster="vid/wolfcreek.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Aerial video of Wolf Creek Golf Club"></video>
         <div class="card-body">
           <span class="eyebrow">Friday · Mesquite, NV</span>
-          <h3>Wolf Creek Golf Club</h3>
+          <h3><a href="https://www.golfwolfcreek.com/" target="_blank" rel="noopener">Wolf Creek Golf Club</a></h3>
           <div class="when"><strong>9:30 + 10:00</strong><span>PT · booked</span></div>
           <p>Elevated tees and canyon carries, right on the drive from Vegas. A twosome at 9:30 and a foursome at 10:00; a large group took 10:10 through 1:40, so the two groups aren't back to back. Rounds run 5+ hours, and there's no denim of any kind.</p>
         </div>
       </article>
       <article class="card">
-        <img src="img/sg-sandhollow10.jpg" alt="Sand Hollow Championship course on red rock cliffs" width="1400" height="788" loading="lazy">
+        <video class="vid" src="vid/sandhollow.mp4" poster="vid/sandhollow.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Aerial video of Sand Hollow"></video>
         <div class="card-body">
           <span class="eyebrow">Saturday · Hurricane, UT</span>
-          <h3>Sand Hollow Championship</h3>
+          <h3><a href="https://sandhollowresort.com/" target="_blank" rel="noopener">Sand Hollow Championship</a></h3>
           <div class="when"><strong>1:10 + 1:22</strong><span>MT · booked</span></div>
           <p>Red sand fairways and a back nine along lava-rock cliffs. The foursome goes off first at 1:10 and the twosome follows at 1:22, so the two groups should finish close together. Expect 4 to 4½ hours, and afternoon heat: bring water.</p>
-          <p>Black Desert only opens tee times 14 days out, around May 1. If we get a good time there, we may switch.</p>
+        </div>
+      </article>
+      <article class="card">
+        <video class="vid" src="vid/blackdesert.mp4" poster="vid/blackdesert.jpg" autoplay muted loop playsinline preload="metadata" aria-label="Aerial video of Black Desert"></video>
+        <div class="card-body">
+          <span class="eyebrow">Saturday · Ivins, UT · Possible switch</span>
+          <h3><a href="https://www.blackdesertresort.com/golf" target="_blank" rel="noopener">Black Desert</a></h3>
+          <div class="when"><strong>Opens ~May 1</strong><span>tee times open 14 days out</span></div>
+          <p>Tom Weiskopf's final design, through black lava fields; it hosts PGA Tour and LPGA events. Cart, forecaddie, and food and soft drinks are included. If a good time opens up, we may switch from Sand Hollow.</p>
         </div>
       </article>
     </div>
@@ -369,7 +383,7 @@ footer details{margin-top:var(--space-2)}
     <p>Kenly Golf Club · Trip No. 4 · Proposed: St. George + Vegas, May 13–16, 2027. Prices are estimates from 2026 rates.</p>
     <details>
       <summary>Photo credits</summary>
-      <p>Zephyr House: the Airbnb listing. Sand Hollow: Vacation Rentals at Sand Hollow Resort. Black Desert: blackdesertresort.com. Wolf Creek: GolfPass. Las Vegas: "Las Vegas Strip from Resorts World February 2023 HDR 1", Wikimedia Commons (CC BY-SA 4.0). Santana: supplied by Tyler.</p>
+      <p>Zephyr House: the Airbnb listing. Sand Hollow: Vacation Rentals at Sand Hollow Resort. Black Desert: blackdesertresort.com. Wolf Creek: GolfPass. Las Vegas: "Las Vegas Strip from Resorts World February 2023 HDR 1", Wikimedia Commons (CC BY-SA 4.0). Course videos: Wolf Creek, Sand Hollow and Troon (Black Desert).</p>
     </details>
   </div>
 </footer>
@@ -417,6 +431,10 @@ footer details{margin-top:var(--space-2)}
   });
   load();setInterval(function(){if(!document.hidden)load()},60000);
 })();
+</script>
+<script>
+(function(){var vs=document.querySelectorAll('video.vid');function go(v){v.muted=true;var p=v.play();if(p&&p.catch)p.catch(function(){});}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting)go(e.target);else e.target.pause();});},{threshold:.2});vs.forEach(function(v){io.observe(v);});}else{vs.forEach(go);}})();
 </script>
 </body>
 </html>
